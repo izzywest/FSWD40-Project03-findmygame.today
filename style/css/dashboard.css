@@ -3,20 +3,6 @@
 /*Fonts*/
 /*Borders*/
 /*Stuff*/
-/*logged_user*/
-.user-logged {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.username {
-  padding: 25px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -24,10 +10,20 @@
           box-sizing: border-box;
 }
 
+/*text*/
+a {
+  text-decoration: none;
+}
+
 .avatar-small {
   width: 50px;
   height: 50px;
   border: 2px solid #e4dfda;
+}
+
+.icon-small {
+  width: 22px;
+  height: 22px;
 }
 
 /*Main Layout*/
@@ -63,10 +59,36 @@ header {
           justify-content: space-between;
   background: #253444;
   color: #e4dfda;
+  border-bottom: 2px solid #040403;
+}
+
+/*logged_user*/
+.user-logged {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.username {
+  padding: 25px;
+  font-family: "Aldrich", sans-serif;
+  color: #4a48a9;
+}
+
+.logout {
+  color: #e4dfda;
+  font-family: "Aldrich", sans-serif;
+}
+
+.logout:hover {
+  border-bottom: 1px solid #d30808;
 }
 
 main {
-  background: #4a48a9;
+  background: #e4dfda;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,29 +99,50 @@ main {
 aside {
   width: 250px;
   background: #253444;
-  padding: 0 25px;
+  border-right: 2px solid #040403;
 }
 
-/* Admin Menu */
-.admin-nav {
+/* Dash Menu */
+.dash-nav {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.admin-nav li a {
-  background: #4a48a9;
+.dash-nav li a {
+  border-bottom: 2px solid #040403;
+  background: #253444;
   height: 40px;
-  border: 1px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 25px;
+  padding: 0 25px;
   text-decoration: none;
+  color: #e4dfda;
+  font-family: "Aldrich", sans-serif;
+  font-weight: bold;
+}
+
+.dash-nav li a:hover, .active {
+  background: #4a48a9;
   color: #253444;
+}
+
+.active {
+  background: red;
+}
+
+.dash-sub-nav {
+  display: none;
+}
+
+.dash-sub-nav li a {
+  background: #e4dfda;
+  height: 40px;
+  color: #4a48a9;
 }
 
 /* Content */
@@ -117,5 +160,9 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: #4a48a9;
 }
 /*# sourceMappingURL=dashboard.css.map */
