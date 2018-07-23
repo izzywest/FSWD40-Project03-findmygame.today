@@ -17,36 +17,30 @@
             <img class="avatar-small" src="../img/avatars/default_avatar.jpg" alt="avatar"> 
             <h1 class="username">$Username</h1>
         </div>
-        <h1>$Title of Page</h1>
+        <h1><?php echo $pageTitle ?></h1>
     </header>
     <main>
         <aside><!-- ### Hide/Show Navs based on user role ### -->
                 <!-- ADMIN NAV -->
                 <ul class="dash-nav">
-                    <li><a href="../index.html">Back to Page</a></li>
-                    <li><a href="#">Menu 2</a>
+                    <li><a class="backlink" href="../index.html">Back to Page</a></li>
+                    <li><a href="index.php">Overview</a></li>
+                    <li><a href="profile.php">Userlist</a></li>
+                    <li><a href="posts.php">Userposts</a></li>
+                    <li><a href="#">Sub Menu Demo</a>
                         <ul class="dash-sub-nav">
                             <li><a href="#">Sub 1</a></li>
                             <li><a href="#">Sub 2</a></li>
                             <li><a href="#">Sub 3</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Menu 3</a></li>
-                    <li><a href="#">Menu 4</a></li>
-                    <li><a href="#">Menu 5</a></li>
-                    <li><a href="#">Menu 6</a></li>
-                    <li><a href="#">Menu 7</a></li>
                 </ul>
 
                 <!-- USER NAV -->
                 <ul class="dash-nav">
-                    <li><a href="#">Menu 1</a></li>
-                    <li><a href="#">Menu 2</a></li>
-                    <li><a href="#">Menu 3</a></li>
-                    <li><a href="#">Menu 4</a></li>
-                    <li><a href="#">Menu 5</a></li>
-                    <li><a href="#">Menu 6</a></li>
-                    <li><a href="#">Menu 7</a></li>
+                    <li><a class="backlink" href="../index.html">Back to Page</a></li>
+                    <li><a href="profile.php">My Profile</a></li>
+                    <li><a href="posts.php">My Posts</a></li>
                 </ul>
 
         </aside>
