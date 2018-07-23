@@ -1,3 +1,5 @@
+<?php $pageTitle = 'Users' ?>
+<?php //$pageTitle = 'Profile' ?>
 <?php include('inc/head.php'); ?>
 
 <div class="admin-content">

@@ -1,3 +1,4 @@
+<?php $pageTitle = 'Posts' ?>
 <?php include('inc/head.php'); ?>
 
 <div class="admin-content">
