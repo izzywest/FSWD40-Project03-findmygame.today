@@ -27,20 +27,18 @@
                     <li><a href="index.php">Overview</a></li>
                     <li><a href="profile.php">Userlist</a></li>
                     <li><a href="posts.php">Userposts</a></li>
-                    <li><a href="#">Sub Menu Demo</a>
-                        <ul class="dash-sub-nav">
-                            <li><a href="#">Sub 1</a></li>
-                            <li><a href="#">Sub 2</a></li>
-                            <li><a href="#">Sub 3</a></li>
-                        </ul>
-                    </li>
                 </ul>
 
                 <!-- USER NAV -->
                 <ul class="dash-nav">
                     <li><a class="backlink" href="../index.html">Back to Page</a></li>
                     <li><a href="profile.php">My Profile</a></li>
-                    <li><a href="posts.php">My Posts</a></li>
+                    <li><a href="#">My Posts</a>
+                        <ul class="dash-sub-nav">
+                            <li><a href="posts.php">My Posts</a></li>
+                            <li><a href="create_post.php">Create Post</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
         </aside>
