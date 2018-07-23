@@ -1,0 +1,69 @@
+@import "general";
+
+/*Main Layout*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+    padding: 0 $pagePadding;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $secColor;
+    color: $light;
+}
+
+main {
+    background: $mainColor;
+    display: flex;
+}
+
+/* Sidebar 
+----------*/
+aside {
+    width: 250px;
+    background: $secColor;
+    padding: 0 $pagePadding;
+}
+
+/* Admin Menu */
+.admin-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-nav li a{
+    background: $mainColor;
+    height: 40px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    padding-left: $pagePadding;
+    text-decoration: none;
+    color: $secColor;
+}
+
+
+/* Content */
+.admin-content {
+    padding: $pagePadding;
+}
+
+
+/* Status Bar */
+footer {
+    height: 30px;
+    padding: 0 $pagePadding;
+    display: flex;
+    align-items: center;
+}
