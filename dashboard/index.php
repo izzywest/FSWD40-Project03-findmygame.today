@@ -1,3 +1,4 @@
+<?php $pageTitle = 'Overview' ?>
 <?php include('inc/head.php'); ?>
 
 <div class="admin-content">
