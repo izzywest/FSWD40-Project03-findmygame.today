@@ -20,10 +20,32 @@ header {
     justify-content: space-between;
     background: $secColor;
     color: $light;
+    border-bottom: 2px solid $black;
+}
+
+/*logged_user*/
+.user-logged {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    padding: $pagePadding;
+    font-family: $consoleFont;
+    color: $mainColor;
+}
+
+.logout {
+    color: $light;
+    font-family: $consoleFont;
+}
+
+.logout:hover {
+    border-bottom: 1px solid $red;
 }
 
 main {
-    background: $mainColor;
+    background: $light;
     display: flex;
 }
 
@@ -32,26 +54,48 @@ main {
 aside {
     width: 250px;
     background: $secColor;
-    padding: 0 $pagePadding;
+    border-right: 2px solid $black;
 }
 
-/* Admin Menu */
-.admin-nav {
+/* Dash Menu */
+.dash-nav {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.admin-nav li a{
-    background: $mainColor;
+.dash-nav li a{
+    border-bottom: 2px solid $black;
+    background: $secColor;
     height: 40px;
-    border: 1px solid #000;
     display: flex;
     align-items: center;
-    padding-left: $pagePadding;
+    padding: 0 $pagePadding;
     text-decoration: none;
+    color: $light;
+    font-family: $consoleFont;
+    font-weight: bold;
+}
+
+.dash-nav li a:hover, .active {
+    background: $mainColor;
     color: $secColor;
 }
+
+.active {
+    background: red;
+}
+
+.dash-sub-nav {
+    display: none;
+}
+
+.dash-sub-nav li a {
+    background: $light;
+    height: 40px;
+    color: $mainColor;
+}
+
 
 
 /* Content */
@@ -66,4 +110,6 @@ footer {
     padding: 0 $pagePadding;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    background: $mainColor;
 }
