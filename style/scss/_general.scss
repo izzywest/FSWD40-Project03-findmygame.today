@@ -1,5 +1,6 @@
 @import "variables";
 @import "components";
+@import "mixins";
 
 * {
     margin: 0;
@@ -7,9 +8,18 @@
     box-sizing: border-box;
 }
 
+/*text*/
+a {
+    text-decoration: none;
+}
 
 .avatar-small {
     width: 50px;
     height: 50px;
     border: $avatar-small-b;
+}
+
+.icon-small {
+    width: 22px;
+    height: 22px;
 }
