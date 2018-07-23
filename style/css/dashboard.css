@@ -1,0 +1,121 @@
+/* ----- Variables -----*/
+/*Colors*/
+/*Fonts*/
+/*Borders*/
+/*Stuff*/
+/*logged_user*/
+.user-logged {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.username {
+  padding: 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.avatar-small {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #e4dfda;
+}
+
+/*Main Layout*/
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header {
+  padding: 0 25px;
+  height: 70px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #253444;
+  color: #e4dfda;
+}
+
+main {
+  background: #4a48a9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Sidebar 
+----------*/
+aside {
+  width: 250px;
+  background: #253444;
+  padding: 0 25px;
+}
+
+/* Admin Menu */
+.admin-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-nav li a {
+  background: #4a48a9;
+  height: 40px;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 25px;
+  text-decoration: none;
+  color: #253444;
+}
+
+/* Content */
+.admin-content {
+  padding: 25px;
+}
+
+/* Status Bar */
+footer {
+  height: 30px;
+  padding: 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=dashboard.css.map */
