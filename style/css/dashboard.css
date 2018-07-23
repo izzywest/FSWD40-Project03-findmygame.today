@@ -145,6 +145,11 @@ aside {
   color: #4a48a9;
 }
 
+a.backlink {
+  background: #4a48a9 !important;
+  color: #253444 !important;
+}
+
 /* Content */
 .admin-content, .user-content {
   padding: 25px;

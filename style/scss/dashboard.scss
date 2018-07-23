@@ -96,7 +96,10 @@ aside {
     color: $mainColor;
 }
 
-
+a.backlink {
+    background: $mainColor !important;
+    color: $secColor !important;
+}
 
 /* Content */
 .admin-content, .user-content {
