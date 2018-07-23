@@ -99,7 +99,7 @@ aside {
 
 
 /* Content */
-.admin-content {
+.admin-content, .user-content {
     padding: $pagePadding;
 }
 
@@ -110,6 +110,20 @@ footer {
     padding: 0 $pagePadding;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     background: $mainColor;
+}
+
+.status-bar {
+    display: flex;
+    list-style: none;
+}
+
+.status-bar li {
+    padding-right: $pagePadding;
+}
+
+.logout-container {
+    display: flex;
+    align-items: center;
 }

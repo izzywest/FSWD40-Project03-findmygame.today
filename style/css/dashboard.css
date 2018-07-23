@@ -146,7 +146,7 @@ aside {
 }
 
 /* Content */
-.admin-content {
+.admin-content, .user-content {
   padding: 25px;
 }
 
@@ -160,9 +160,29 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #4a48a9;
+}
+
+.status-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.status-bar li {
+  padding-right: 25px;
+}
+
+.logout-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=dashboard.css.map */
