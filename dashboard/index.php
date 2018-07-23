@@ -3,12 +3,12 @@
 
 <div class="admin-content">
     <!-- Content Admin -->
-    Content
+    Admin Overview boxes
 </div>
 
 <div class="user-content">
     <!-- Content User-->
-    Content
+    User Overview boxes
 </div>
 
 <?php include('inc/footer.php'); ?>
