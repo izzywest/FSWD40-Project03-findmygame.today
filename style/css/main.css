@@ -49,6 +49,11 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 25px;
+  position: fixed;
+}
+
+#logo img {
+  height: 50px;
 }
 
 /*Slider*/

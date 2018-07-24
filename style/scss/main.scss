@@ -12,6 +12,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: $pagePadding;
+    position: fixed;
+}
+
+#logo img {
+    height: 50px;
 }
 
 /*Slider*/
