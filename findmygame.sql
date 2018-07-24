@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 23, 2018 at 04:07 PM
+-- Generation Time: Jul 24, 2018 at 08:59 AM
 -- Server version: 5.7.22-0ubuntu0.16.04.1
 -- PHP Version: 7.1.19-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -1215,13 +1215,13 @@ INSERT INTO `POSTS` (`PO_ID`, `FK_GA_ID`, `PO_DateTime`, `PO_Headline`, `PO_Desc
 --
 
 CREATE TABLE `USER` (
-  `U_ID` int(11) NOT NULL,
-  `FK_PE_ID` int(1) NOT NULL,
-  `FK_I_ID` int(1) NOT NULL,
-  `FK_B_ID` int(1) NOT NULL,
-  `FK_PL_ID` int(1) NOT NULL,
-  `FK_GR_ID` int(1) NOT NULL,
-  `FK_PO_ID` int(1) NOT NULL,
+  `U_ID` int(11) DEFAULT NULL,
+  `FK_PE_ID` int(11) DEFAULT NULL,
+  `FK_I_ID` varchar(1) DEFAULT NULL,
+  `FK_B_ID` varchar(1) DEFAULT NULL,
+  `FK_PL_ID` varchar(1) DEFAULT NULL,
+  `FK_GR_ID` varchar(1) DEFAULT NULL,
+  `FK_PO_ID` varchar(1) DEFAULT NULL,
   `U_Username` varchar(50) DEFAULT NULL,
   `U_Pass` varchar(50) DEFAULT NULL,
   `U_Email` varchar(50) DEFAULT NULL,
@@ -1242,106 +1242,16 @@ CREATE TABLE `USER` (
 --
 
 INSERT INTO `USER` (`U_ID`, `FK_PE_ID`, `FK_I_ID`, `FK_B_ID`, `FK_PL_ID`, `FK_GR_ID`, `FK_PO_ID`, `U_Username`, `U_Pass`, `U_Email`, `U_Status`, `U_Firstname`, `U_Lastname`, `U_Age`, `U_Address`, `U_City`, `U_Region`, `U_Avatar`, `U_Rank`, `U_Socials`) VALUES
-(1, 1, 1, 1, 1, 1, 1, 'rtrenholm0', 's4jr27W2sQxj', 'rtrenholm0@mayoclinic.com', '0', 'Reginald', 'Trenholm', 40, '07465 Stuart Point', 'Qingyang', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Steam'),
-(2, 1, 1, 1, 1, 1, 1, 'bhallaways1', 'mCQq1ai54q', 'bhallaways1@cnbc.com', '0', 'Bail', 'Hallaways', 19, '30 Morning Road', 'Lokatadho', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Battlenet'),
-(3, 1, 1, 1, 1, 1, 1, 'lmctrusty2', 'hCibvyEPX', 'lmctrusty2@wired.com', '0', 'Lemmie', 'McTrusty', 49, '9599 Warrior Park', 'Covas', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(4, 1, 1, 1, 1, 1, 1, 'lballsdon3', '1twZzNCAj', 'lballsdon3@springer.com', '1', 'Lelah', 'Ballsdon', 50, '860 Heffernan Plaza', 'Yangjiaping', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Discord'),
-(5, 1, 1, 1, 1, 1, 1, 'ojoll4', 'QcRdv9x', 'ojoll4@rediff.com', '1', 'Olga', 'Joll', 41, '7274 Village Green Terrace', 'Aramayuan', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Twitch'),
-(6, 1, 1, 1, 1, 1, 1, 'rblindermann5', '1Rr3jPA', 'rblindermann5@ucoz.ru', '0', 'Rois', 'Blindermann', 19, '548 Ryan Alley', 'Dayr Ab? ?a‘?f', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'TeamSpeak'),
-(7, 1, 1, 1, 1, 1, 1, 'pbouch6', 'uUMiMoK2g8', 'pbouch6@typepad.com', '0', 'Patrice', 'Bouch', 23, '9 Aberg Crossing', 'Kemuning', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Battlenet'),
-(8, 1, 1, 1, 1, 1, 1, 'gbratt7', 'PzgI9at1', 'gbratt7@ifeng.com', '1', 'Gino', 'Bratt', 30, '0982 Crowley Road', 'Aikmel', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Discord'),
-(9, 1, 1, 1, 1, 1, 1, 'dwarkup8', '44bgua', 'dwarkup8@oracle.com', '0', 'Daisey', 'Warkup', 21, '1628 Browning Center', 'Singida', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'TeamSpeak'),
-(10, 1, 1, 1, 1, 1, 1, 'ochristescu9', 'zMdw2gc5H', 'ochristescu9@sitemeter.com', '1', 'Olimpia', 'Christescu', 18, '9 Sunfield Parkway', 'Honolulu', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Origin'),
-(11, 1, 1, 1, 1, 1, 1, 'osedgemonda', 'Tdc8KdBAgz', 'osedgemonda@nasa.gov', '0', 'Omar', 'Sedgemond', 42, '993 Fisk Crossing', 'Jiaocha', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'TeamSpeak'),
-(12, 1, 1, 1, 1, 1, 1, 'vhalmsb', '2XwKqqO', 'vhalmsb@shop-pro.jp', '1', 'Vincent', 'Halms', 25, '6 Buell Crossing', 'Gengqing', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Skype'),
-(13, 1, 1, 1, 1, 1, 1, 'mgoginc', '45QEMJH76', 'mgoginc@cyberchimps.com', '1', 'Marc', 'Gogin', 29, '797 Briar Crest Way', 'Kuçovë', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Battlenet'),
-(14, 1, 1, 1, 1, 1, 1, 'aheysd', '3bS8zCGpB', 'aheysd@hugedomains.com', '0', 'Angy', 'Heys', 28, '6 Ridgeway Alley', 'Nangkasari', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Discord'),
-(15, 1, 1, 1, 1, 1, 1, 'jechaliee', 'hIF1XS', 'jechaliee@jugem.jp', '1', 'Jock', 'Echalie', 27, '2 Armistice Center', 'Bapska', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Origin'),
-(16, 1, 1, 1, 1, 1, 1, 'jmcvitief', '1GMIAOxKLI', 'jmcvitief@wikimedia.org', '0', 'Jenda', 'McVitie', 41, '7149 Iowa Pass', 'Yandun', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Twitch'),
-(17, 1, 1, 1, 1, 1, 1, 'lclitheroeg', 'rOghE5Nfu', 'lclitheroeg@tmall.com', '1', 'Lucila', 'Clitheroe', 32, '81 Butterfield Terrace', 'Kayar', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'TeamSpeak'),
-(18, 1, 1, 1, 1, 1, 1, 'lpickaverh', 'cl5h8LD', 'lpickaverh@ucoz.ru', '1', 'La verne', 'Pickaver', 45, '84395 Dahle Plaza', 'Qiandeng', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'TeamSpeak'),
-(19, 1, 1, 1, 1, 1, 1, 'gwelshi', '0JdfeL7', 'gwelshi@g.co', '0', 'Gail', 'Welsh', 48, '97887 Saint Paul Place', 'Xindi', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Twitch'),
-(20, 1, 1, 1, 1, 1, 1, 'rmacmoyerj', 'jBbCdzpBr', 'rmacmoyerj@biglobe.ne.jp', '0', 'Rudd', 'MacMoyer', 43, '0197 Mccormick Trail', 'Vidnoye', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Battlenet'),
-(21, 1, 1, 1, 1, 1, 1, 'charbertsonk', 'r1FB80E', 'charbertsonk@hostgator.com', '1', 'Cacilia', 'Harbertson', 15, '06175 5th Parkway', 'S?tkhira', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Skype'),
-(22, 1, 1, 1, 1, 1, 1, 'csinclarl', 'stfnwhYJhPJi', 'csinclarl@dot.gov', '1', 'Christal', 'Sinclar', 45, '50 Thierer Drive', 'Gulonggang', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Discord'),
-(23, 1, 1, 1, 1, 1, 1, 'cmerrydewm', 'Uu09OWVA', 'cmerrydewm@yellowbook.com', '1', 'Cord', 'Merrydew', 32, '2 Burrows Crossing', 'Ngrejo', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'TeamSpeak'),
-(24, 1, 1, 1, 1, 1, 1, 'clewintonn', 'hojrBNZNcM', 'clewintonn@nytimes.com', '0', 'Consuelo', 'Lewinton', 23, '6550 Gina Street', 'Cikarang', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Discord'),
-(25, 1, 1, 1, 1, 1, 1, 'blovedayo', 'IrgKvFVJOtqL', 'blovedayo@csmonitor.com', '1', 'Brianne', 'Loveday', 36, '06 Kings Terrace', '?l Ma‘?dah', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Origin'),
-(26, 1, 1, 1, 1, 1, 1, 'rbenedidickp', '5rvGKl1o0sq', 'rbenedidickp@github.io', '1', 'Rance', 'Benedidick', 46, '4 Comanche Park', 'Paldiski', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Origin'),
-(27, 1, 1, 1, 1, 1, 1, 'srobbq', 'EXdNGAmD', 'srobbq@amazon.co.uk', '1', 'Staffard', 'Robb', 23, '4 Helena Street', 'Xiangba', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Steam'),
-(28, 1, 1, 1, 1, 1, 1, 'egianiellor', '1NaqrUE', 'egianiellor@census.gov', '1', 'Esmeralda', 'Gianiello', 29, '1412 4th Way', 'Guanambi', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Battlenet'),
-(29, 1, 1, 1, 1, 1, 1, 'slampkins', 'ibnbtcPJQmKe', 'slampkins@barnesandnoble.com', '0', 'Shem', 'Lampkin', 17, '6975 Sauthoff Place', 'Dmitriyevka', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Discord'),
-(30, 1, 1, 1, 1, 1, 1, 'edeakest', 'GRfFHXbd', 'edeakest@cocolog-nifty.com', '1', 'Evaleen', 'Deakes', 42, '28 Esch Terrace', 'Bor?zj?n', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Origin'),
-(31, 1, 1, 1, 1, 1, 1, 'dtheriotu', '0SLk0gse7PK', 'dtheriotu@pen.io', '1', 'Debera', 'Theriot', 37, '21003 Dapin Hill', 'Carrefour', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'TeamSpeak'),
-(32, 1, 1, 1, 1, 1, 1, 'akarchowskiv', 'DD49Zjdbl6', 'akarchowskiv@ameblo.jp', '1', 'Alessandra', 'Karchowski', 28, '0 Golf View Court', 'Semenivka', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Discord'),
-(33, 1, 1, 1, 1, 1, 1, 'outtridgew', 'Gr6bybHTI6', 'outtridgew@nydailynews.com', '0', 'Opalina', 'Uttridge', 34, '71011 Derek Lane', 'Obama', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Twitch'),
-(34, 1, 1, 1, 1, 1, 1, 'hauberyx', 'gDXz3WJBJGW', 'hauberyx@wikispaces.com', '0', 'Hieronymus', 'Aubery', 32, '3 Mayer Court', 'Stockholm', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Skype'),
-(35, 1, 1, 1, 1, 1, 1, 'kchristiey', 'UseXwCjxFbho', 'kchristiey@issuu.com', '0', 'Kerry', 'Christie', 34, '2 Melvin Drive', 'Gafsa', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Discord'),
-(36, 1, 1, 1, 1, 1, 1, 'pgiacovettiz', 'e1lQyVjTHW', 'pgiacovettiz@nydailynews.com', '0', 'Penrod', 'Giacovetti', 32, '28 Lawn Lane', 'Alor Setar', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Battlenet'),
-(37, 1, 1, 1, 1, 1, 1, 'pscurrell10', '7w0VP7', 'pscurrell10@telegraph.co.uk', '0', 'Penrod', 'Scurrell', 46, '68 Quincy Lane', 'Sanquan', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Discord'),
-(38, 1, 1, 1, 1, 1, 1, 'fwaycott11', 'mnka5rFR5a', 'fwaycott11@archive.org', '1', 'Fidela', 'Waycott', 15, '50253 Lakewood Crossing', 'Seongnam-si', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Steam'),
-(39, 1, 1, 1, 1, 1, 1, 'etwelve12', 'wt6xhgUkBx', 'etwelve12@goo.gl', '1', 'Ema', 'Twelve', 37, '020 Dixon Point', 'Jambuir Timur', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Origin'),
-(40, 1, 1, 1, 1, 1, 1, 'glanglois13', 's392jgojJZ', 'glanglois13@qq.com', '1', 'Glennis', 'L\' Anglois', 30, '9 Grasskamp Pass', 'Banatski Despotovac', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Origin'),
-(41, 1, 1, 1, 1, 1, 1, 'mgerrad14', '5fLNjlvDhRL', 'mgerrad14@typepad.com', '1', 'Moe', 'Gerrad', 40, '88 Thompson Place', 'Poá', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Battlenet'),
-(42, 1, 1, 1, 1, 1, 1, 'cfelgat15', 'QjCf3fZl5WkA', 'cfelgat15@w3.org', '1', 'Caresa', 'Felgat', 44, '2 Summit Court', 'Tsévié', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'TeamSpeak'),
-(43, 1, 1, 1, 1, 1, 1, 'eredfern16', 'M6Dw8qWR', 'eredfern16@sciencedaily.com', '0', 'Emilie', 'Redfern', 32, '86 Surrey Junction', 'San José', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'TeamSpeak'),
-(44, 1, 1, 1, 1, 1, 1, 'cdanneil17', 'UuRE6wmEWR', 'cdanneil17@cam.ac.uk', '1', 'Conny', 'Danneil', 29, '05 Melby Circle', 'Gwangju', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Steam'),
-(45, 1, 1, 1, 1, 1, 1, 'jbende18', 'LBjz6vCH', 'jbende18@npr.org', '0', 'Joya', 'Bende', 30, '34 Truax Lane', 'Yar?m', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Twitch'),
-(46, 1, 1, 1, 1, 1, 1, 'mthorpe19', 'IlfXnsi', 'mthorpe19@youtu.be', '0', 'Marilyn', 'Thorpe', 31, '4 Schlimgen Place', 'Ngrayun', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Steam'),
-(47, 1, 1, 1, 1, 1, 1, 'wspondley1a', 'QlpIpR968mN', 'wspondley1a@nih.gov', '1', 'Willie', 'Spondley', 42, '552 Ryan Alley', 'Beitan', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Origin'),
-(48, 1, 1, 1, 1, 1, 1, 'cfisbey1b', '9miCkD', 'cfisbey1b@google.com.hk', '1', 'Clara', 'Fisbey', 27, '1 Surrey Crossing', 'San Juan', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Skype'),
-(49, 1, 1, 1, 1, 1, 1, 'cvero1c', 'D135HCcX7P', 'cvero1c@ycombinator.com', '1', 'Christabel', 'Vero', 34, '868 Logan Place', 'Sandia', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Skype'),
-(50, 1, 1, 1, 1, 1, 1, 'nscotcher1d', 'WNM9IH1Sqv', 'nscotcher1d@dagondesign.com', '0', 'Ned', 'Scotcher', 24, '6 Forest Dale Pass', 'Wilmington', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'TeamSpeak'),
-(51, 1, 1, 1, 1, 1, 1, 'eniblo1e', 'Ie13DvNte4ek', 'eniblo1e@ed.gov', '1', 'Evangelin', 'Niblo', 50, '9 Gerald Road', 'Jiaoziya', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Discord'),
-(52, 1, 1, 1, 1, 1, 1, 'ccoldrick1f', 'G9V71r', 'ccoldrick1f@scribd.com', '0', 'Calhoun', 'Coldrick', 32, '9938 High Crossing Circle', 'Sumberan', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Discord'),
-(53, 1, 1, 1, 1, 1, 1, 'smeedendorpe1g', '6G4jNnN7', 'smeedendorpe1g@theatlantic.com', '1', 'Sayre', 'Meedendorpe', 31, '5 Westend Circle', 'Suicheng', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Steam'),
-(54, 1, 1, 1, 1, 1, 1, 'bkemshell1h', 'rxtdLiu7Pc', 'bkemshell1h@eventbrite.com', '0', 'Bryn', 'Kemshell', 15, '0749 Armistice Terrace', '?ehlovice', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Battlenet'),
-(55, 1, 1, 1, 1, 1, 1, 'hkleisel1i', '2p1LDWNX5', 'hkleisel1i@ucla.edu', '1', 'Hubert', 'Kleisel', 48, '04452 Lyons Park', 'Velenje', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Skype'),
-(56, 1, 1, 1, 1, 1, 1, 'mfintoph1j', '98ynMMvA35', 'mfintoph1j@oaic.gov.au', '0', 'Mil', 'Fintoph', 15, '9216 Crownhardt Crossing', 'Memphis', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(57, 1, 1, 1, 1, 1, 1, 'brugiero1k', 'IoStsf10omX', 'brugiero1k@usnews.com', '0', 'Bruis', 'Rugiero', 31, '0 Ilene Lane', 'Gupakan', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(58, 1, 1, 1, 1, 1, 1, 'slosty1l', 't9l34TJYK6l7', 'slosty1l@topsy.com', '0', 'Sula', 'Losty', 40, '4 Mayer Way', 'Sydney', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Origin'),
-(59, 1, 1, 1, 1, 1, 1, 'tsorrell1m', 'qbypIK7B8T', 'tsorrell1m@dion.ne.jp', '0', 'Thedric', 'Sorrell', 50, '41 Del Mar Hill', 'Santo Tomas', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Origin'),
-(60, 1, 1, 1, 1, 1, 1, 'kwebbbowen1n', 'XINj7n3ds9', 'kwebbbowen1n@bloomberg.com', '1', 'Kalina', 'Webb-Bowen', 29, '049 Moose Park', 'Xinjiang', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Origin'),
-(61, 1, 1, 1, 1, 1, 1, 'jmarks1o', 'hKqfBhOYDBl', 'jmarks1o@forbes.com', '1', 'Jennine', 'Marks', 41, '987 Starling Place', 'Yuwang', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Skype'),
-(62, 1, 1, 1, 1, 1, 1, 'jelverstone1p', 'uA4gYBdkDW', 'jelverstone1p@rediff.com', '1', 'Jemie', 'Elverstone', 43, '2 Artisan Court', 'Dabao', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(63, 1, 1, 1, 1, 1, 1, 'mpetticrow1q', 'HFzvgl8zKF', 'mpetticrow1q@opensource.org', '0', 'Moshe', 'Petticrow', 38, '09815 Briar Crest Terrace', 'Ngembo', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Skype'),
-(64, 1, 1, 1, 1, 1, 1, 'cbuard1r', 'jXk1vmUBpfxY', 'cbuard1r@naver.com', '0', 'Clotilda', 'Buard', 15, '621 Chive Junction', 'Höganäs', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Twitch'),
-(65, 1, 1, 1, 1, 1, 1, 'ppaver1s', 'bdRwYp', 'ppaver1s@upenn.edu', '0', 'Pearce', 'Paver', 25, '24594 Hauk Court', 'Ba?tów', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'TeamSpeak'),
-(66, 1, 1, 1, 1, 1, 1, 'rjefferys1t', 't0Y1uU1g8', 'rjefferys1t@webmd.com', '1', 'Royal', 'Jefferys', 45, '227 Derek Center', 'Stenungsund', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Twitch'),
-(67, 1, 1, 1, 1, 1, 1, 'gpettus1u', 'Z6axN8IX', 'gpettus1u@themeforest.net', '1', 'Gerrie', 'Pettus', 19, '586 Corscot Park', 'Sufang', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Twitch'),
-(68, 1, 1, 1, 1, 1, 1, 'pgreathead1v', 'gD3QMhQ6H', 'pgreathead1v@va.gov', '1', 'Perrine', 'Greathead', 20, '24628 Crownhardt Avenue', 'Niquelândia', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'TeamSpeak'),
-(69, 1, 1, 1, 1, 1, 1, 'csapwell1w', 'syMfb2Cfdl1', 'csapwell1w@scientificamerican.com', '1', 'Carmella', 'Sapwell', 36, '4 Miller Way', 'Ait Ali', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Steam'),
-(70, 1, 1, 1, 1, 1, 1, 'clyptrit1x', 'M83HOwOke', 'clyptrit1x@si.edu', '1', 'Charline', 'Lyptrit', 44, '599 Mitchell Circle', 'Längelmäki', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Steam'),
-(71, 1, 1, 1, 1, 1, 1, 'mvannini1y', '6hA7LJ3hn', 'mvannini1y@hugedomains.com', '0', 'Morrie', 'Vannini', 34, '753 Eliot Drive', 'Cisagu', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Battlenet'),
-(72, 1, 1, 1, 1, 1, 1, 'ttuckwood1z', 'KpztXGVG2', 'ttuckwood1z@eventbrite.com', '1', 'Thedrick', 'Tuckwood', 26, '8231 Welch Plaza', 'Apitong', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'TeamSpeak'),
-(73, 1, 1, 1, 1, 1, 1, 'dmenhci20', 'HNSehbuUw', 'dmenhci20@blogs.com', '1', 'Dianemarie', 'Menhci', 29, '9862 Bobwhite Lane', 'Brloh', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'TeamSpeak'),
-(74, 1, 1, 1, 1, 1, 1, 'rriding21', 'nYkuGIUOUWi', 'rriding21@qq.com', '0', 'Romeo', 'Riding', 26, '02 Morningstar Center', 'New Bedford', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Steam'),
-(75, 1, 1, 1, 1, 1, 1, 'dbertolin22', 'YtIvFG', 'dbertolin22@networksolutions.com', '1', 'Dorette', 'Bertolin', 25, '32 Pepper Wood Junction', 'Bayanbaogede', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Battlenet'),
-(76, 1, 1, 1, 1, 1, 1, 'kroeby23', 'QcV0yuQU', 'kroeby23@google.com.br', '1', 'Krispin', 'Roeby', 19, '752 Monica Place', 'Yandang', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Steam'),
-(77, 1, 1, 1, 1, 1, 1, 'lstigell24', 'icZvSCWWVY', 'lstigell24@mashable.com', '1', 'Leonerd', 'Stigell', 41, '71006 Ilene Circle', 'Sampangbitung', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Twitch'),
-(78, 1, 1, 1, 1, 1, 1, 'bleyre25', 'm4Y1fa', 'bleyre25@fotki.com', '0', 'Brinna', 'Leyre', 40, '4793 Trailsway Court', 'Freiburg im Breisgau', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Discord'),
-(79, 1, 1, 1, 1, 1, 1, 'scawdell26', 'uIm5lzVZI', 'scawdell26@wired.com', '1', 'Shandy', 'Cawdell', 22, '53 Bartillon Parkway', 'Richmond', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Origin'),
-(80, 1, 1, 1, 1, 1, 1, 'brignold27', '5CYckpSRYC', 'brignold27@nbcnews.com', '0', 'Brunhilde', 'Rignold', 24, '12 Johnson Point', 'Primorskiy', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Steam'),
-(81, 1, 1, 1, 1, 1, 1, 'abreckwell28', 'UnkOLsnlYz', 'abreckwell28@newsvine.com', '0', 'Aksel', 'Breckwell', 45, '4771 Anderson Court', 'Twardogóra', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'TeamSpeak'),
-(82, 1, 1, 1, 1, 1, 1, 'vbrecknall29', 'hnl4sEzZZB', 'vbrecknall29@deliciousdays.com', '0', 'Vinny', 'Brecknall', 20, '67736 Red Cloud Avenue', 'Tomobe', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(83, 1, 1, 1, 1, 1, 1, 'mleleu2a', 'Eu09Kn', 'mleleu2a@theatlantic.com', '0', 'Mike', 'Le Leu', 17, '5 Maywood Circle', 'Naranjito', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(84, 1, 1, 1, 1, 1, 1, 'ckilsby2b', 'a1Kuo7c', 'ckilsby2b@t.co', '1', 'Christiane', 'Kilsby', 42, '3 Ramsey Drive', 'Cachoeirinha', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(85, 1, 1, 1, 1, 1, 1, 'bruxton2c', '4OZJWl', 'bruxton2c@deviantart.com', '0', 'Belva', 'Ruxton', 22, '9966 Eggendart Center', 'Shanghe', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'TeamSpeak'),
-(86, 1, 1, 1, 1, 1, 1, 'rtadgell2d', '2KJpAHpURzw', 'rtadgell2d@cbslocal.com', '0', 'Rubetta', 'Tadgell', 43, '69565 Marquette Court', 'Itoman', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Twitch'),
-(87, 1, 1, 1, 1, 1, 1, 'jbody2e', 'zrWf1UPRm', 'jbody2e@boston.com', '1', 'Janean', 'Body', 44, '3907 3rd Alley', 'Ukrainka', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Steam'),
-(88, 1, 1, 1, 1, 1, 1, 'dmarflitt2f', 'VBh5wOiA', 'dmarflitt2f@lycos.com', '0', 'Deck', 'Marflitt', 44, '220 Havey Pass', 'Parlilitan', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'TeamSpeak'),
-(89, 1, 1, 1, 1, 1, 1, 'cpledger2g', '4R3UkXFR1', 'cpledger2g@jugem.jp', '1', 'Carmine', 'Pledger', 17, '1854 Kennedy Place', 'Kotel’niki', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Steam'),
-(90, 1, 1, 1, 1, 1, 1, 'esellers2h', 'vcKRES27who6', 'esellers2h@de.vu', '1', 'Elmer', 'Sellers', 25, '165 Holmberg Court', 'Xuanzhou', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Discord'),
-(91, 1, 1, 1, 1, 1, 1, 'kmarc2i', '3V7WdgeT', 'kmarc2i@4shared.com', '1', 'Karee', 'Marc', 23, '394 Dayton Park', 'Podivín', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Steam'),
-(92, 1, 1, 1, 1, 1, 1, 'cilyushkin2j', 'AcSKPmR4', 'cilyushkin2j@google.es', '1', 'Cordi', 'Ilyushkin', 48, '293 Everett Hill', 'Az Zuwayt?nah', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(93, 1, 1, 1, 1, 1, 1, 'jweare2k', 'zKvksBerwk', 'jweare2k@surveymonkey.com', '0', 'Jenelle', 'Weare', 20, '156 Forster Plaza', 'Prómachoi', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Discord'),
-(94, 1, 1, 1, 1, 1, 1, 'sofaherty2l', 'dJlx5eMulhi', 'sofaherty2l@ycombinator.com', '0', 'Stephine', 'O\' Faherty', 34, '769 Montana Road', 'Grosuplje', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Twitch'),
-(95, 1, 1, 1, 1, 1, 1, 'alammiman2m', '4I0NBeS3ocVr', 'alammiman2m@indiegogo.com', '1', 'Adella', 'Lammiman', 20, '82 7th Way', 'Taketoyo', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(96, 1, 1, 1, 1, 1, 1, 'ochipp2n', 'zrzDmfV', 'ochipp2n@nytimes.com', '0', 'Omar', 'Chipp', 31, '1 Mccormick Street', 'Remiremont', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Steam'),
-(97, 1, 1, 1, 1, 1, 1, 'eplunket2o', 'jlhe98L', 'eplunket2o@eepurl.com', '0', 'Ewen', 'Plunket', 26, '219 Petterle Point', 'Karanganyar', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Battlenet'),
-(98, 1, 1, 1, 1, 1, 1, 'nburgan2p', 'RiLF8JqnRj3Z', 'nburgan2p@wisc.edu', '1', 'Nanon', 'Burgan', 44, '561 Sherman Trail', 'Cibunar', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Twitch'),
-(99, 1, 1, 1, 1, 1, 1, 'pmitcheson2q', 'Ps2XEJcKQ', 'pmitcheson2q@marketwatch.com', '1', 'Perla', 'Mitcheson', 18, '8606 Gerald Avenue', 'Limeiras', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Twitch'),
-(100, 1, 1, 1, 1, 1, 1, 'ddennistoun2r', 'tsNwg4Ljb', 'ddennistoun2r@dailymail.co.uk', '0', 'Doralin', 'Dennistoun', 22, '255 Jay Alley', 'Stockholm', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Steam');
+(1, 1, '1', '1', '1', '1', '1', 'rtrenholm0', 's4jr27W2sQxj', 'rtrenholm0@mayoclinic.com', '0', 'Reginald', 'Trenholm', 40, '07465 Stuart Point', 'Qingyang', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Steam'),
+(2, 1, '1', '1', '1', '1', '1', 'bhallaways1', 'mCQq1ai54q', 'bhallaways1@cnbc.com', '0', 'Bail', 'Hallaways', 19, '30 Morning Road', 'Lokatadho', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Battlenet'),
+(3, 1, '1', '1', '1', '1', '1', 'lmctrusty2', 'hCibvyEPX', 'lmctrusty2@wired.com', '0', 'Lemmie', 'McTrusty', 49, '9599 Warrior Park', 'Covas', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
+(4, 1, '1', '1', '1', '1', '1', 'lballsdon3', '1twZzNCAj', 'lballsdon3@springer.com', '1', 'Lelah', 'Ballsdon', 50, '860 Heffernan Plaza', 'Yangjiaping', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Discord'),
+(5, 1, '1', '1', '1', '1', '1', 'ojoll4', 'QcRdv9x', 'ojoll4@rediff.com', '1', 'Olga', 'Joll', 41, '7274 Village Green Terrace', 'Aramayuan', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Twitch'),
+(6, 1, '1', '1', '1', '1', '1', 'rblindermann5', '1Rr3jPA', 'rblindermann5@ucoz.ru', '0', 'Rois', 'Blindermann', 19, '548 Ryan Alley', 'Dayr Ab? ?a‘?f', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'TeamSpeak'),
+(7, 1, '1', '1', '1', '1', '1', 'pbouch6', 'uUMiMoK2g8', 'pbouch6@typepad.com', '0', 'Patrice', 'Bouch', 23, '9 Aberg Crossing', 'Kemuning', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Battlenet'),
+(8, 1, '1', '1', '1', '1', '1', 'gbratt7', 'PzgI9at1', 'gbratt7@ifeng.com', '1', 'Gino', 'Bratt', 30, '0982 Crowley Road', 'Aikmel', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Discord'),
+(9, 1, '1', '1', '1', '1', '1', 'dwarkup8', '44bgua', 'dwarkup8@oracle.com', '0', 'Daisey', 'Warkup', 21, '1628 Browning Center', 'Singida', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'TeamSpeak'),
+(10, 1, '1', '1', '1', '1', '1', 'ochristescu9', 'zMdw2gc5H', 'ochristescu9@sitemeter.com', '1', 'Olimpia', 'Christescu', 18, '9 Sunfield Parkway', 'Honolulu', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Origin');
 
 --
 -- Indexes for dumped tables
@@ -1390,12 +1300,6 @@ ALTER TABLE `POSTS`
   ADD PRIMARY KEY (`PO_ID`);
 
 --
--- Indexes for table `USER`
---
-ALTER TABLE `USER`
-  ADD PRIMARY KEY (`U_ID`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -1434,11 +1338,6 @@ ALTER TABLE `PLATFORM`
 --
 ALTER TABLE `POSTS`
   MODIFY `PO_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
---
--- AUTO_INCREMENT for table `USER`
---
-ALTER TABLE `USER`
-  MODIFY `U_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
