@@ -1,8 +1,19 @@
+/*Slider*/
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: arial, sans-serif, monospace, helvetica;
+.slide1 {
+  background-image: url(../../img/slider/overwatch.jpg);
+}
+
+.slide2 {
+  background-image: url(../../img/slider/battlefront.jpg)
+}
+
+.slide3 {
+  background-image: url(../../img/slider/fortnite.jpg)
+}
+
+.slide4 {
+  background-image: url(../../img/slider/wow.jpg)
 }
 
 #slider {
@@ -32,21 +43,23 @@ body {
 
 
 .slide div {
-  margin: 15% auto;
+  margin: 15% 20%;
   padding: .5em 3em .5em 1em;
-  left: 25%;
+  left: 10%;
   background-color: rgba(50,50,50,0.4);
-  width: 50%;
+  width: 30%;
 }
 
 .slide div h2, .slide div h3, .slide div h4 {
   color: orange;
-  font-size: 200%;
+  font-size: 5em;
+  text-transform: uppercase;
 }
 
 .slide div span {
   color: #fff;
   font-size: 130%;
+  font-weight: bold;
 }
 
 .arrow {
