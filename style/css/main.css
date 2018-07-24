@@ -307,6 +307,7 @@ label {
 
 body {
   font-family: "News Cycle";
+  letter-spacing: 2px;
 }
 
 /*text*/
@@ -523,11 +524,11 @@ nav ul li a {
   fill: #e4dfda;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, .active {
   color: #4a48a9;
 }
 
-nav ul li a:hover .svgback {
+nav ul li a:hover .svgback, .active .svgback {
   fill: #4a48a9;
 }
 
@@ -566,6 +567,50 @@ main {
 
 #about {
   background-image: url("https://slotopaint.com/wp-content/uploads/2016/05/Legendlore_slide_06.jpg");
+}
+
+/*GAMES
+-------*/
+#game-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.game-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.game-image {
+  position: relative;
+  width: 50%;
+  margin-right: 25px;
+}
+
+.game-platform {
+  background: #4a48a9;
+  margin-top: -7px;
+  color: #e4dfda;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.game-platform strong {
+  color: #ffa500;
+}
+
+.game-image img {
+  width: 100%;
+}
+
+.game-meta {
+  width: 50%;
 }
 
 aside {

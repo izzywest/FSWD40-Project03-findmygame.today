@@ -54,11 +54,11 @@ nav ul li a{
     fill: $light;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, .active {
     color: $mainColor;
 }
 
-nav ul li a:hover .svgback {
+nav ul li a:hover .svgback, .active .svgback {
     fill: $mainColor;
 }
 
@@ -93,6 +93,47 @@ main {
 #about {
     background-image: url('https://slotopaint.com/wp-content/uploads/2016/05/Legendlore_slide_06.jpg');
 }
+
+
+/*GAMES
+-------*/
+#game-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-box {
+    display: flex;
+    width: 100%;
+    margin-bottom: $pagePadding;
+}
+
+.game-image {
+    position: relative;
+    width: 50%;
+    margin-right: $pagePadding;
+}
+
+.game-platform {
+    background: $mainColor;
+    margin-top: -7px;
+    color: $light;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.game-platform strong {
+    color: $orange;
+}
+
+.game-image img {
+    width: 100%;
+}
+
+.game-meta {
+    width: 50%;
+}
+
 
 aside {
     width: 300px;
