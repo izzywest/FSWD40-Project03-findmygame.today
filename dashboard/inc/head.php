@@ -23,7 +23,7 @@
         <aside><!-- ### Hide/Show Navs based on user role ### -->
                 <!-- ADMIN NAV -->
                 <ul class="dash-nav">
-                    <li><a class="backlink" href="../index.html">Back to Page</a></li>
+                    <li><a class="backlink" href="../index.php">Back to Page</a></li>
                     <li><a href="index.php">Overview</a></li>
                     <li><a href="profile.php">Userlist</a></li>
                     <li><a href="posts.php">Userposts</a></li>
@@ -31,7 +31,7 @@
 
                 <!-- USER NAV -->
                 <ul class="dash-nav">
-                    <li><a class="backlink" href="../index.html">Back to Page</a></li>
+                    <li><a class="backlink" href="../index.php">Back to Page</a></li>
                     <li><a href="profile.php">My Profile</a></li>
                     <li><a href="#">My Posts</a>
                         <ul class="dash-sub-nav">
