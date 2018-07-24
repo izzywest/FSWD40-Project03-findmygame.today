@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 24. Jul 2018 um 20:34
--- Server-Version: 10.1.32-MariaDB
--- PHP-Version: 7.2.5
+-- Erstellungszeit: 24. Jul 2018 um 21:01
+-- Server-Version: 10.1.33-MariaDB
+-- PHP-Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -71,10 +71,43 @@ CREATE TABLE `game` (
   `FK_GE_ID` int(11) NOT NULL,
   `GA_Name` varchar(255) DEFAULT NULL,
   `GA_Description` varchar(255) DEFAULT NULL,
-  `GA_Logo` varchar(255) DEFAULT NULL,
+  `GA_Platform` varchar(255) DEFAULT NULL,
   `GA_Image` varchar(255) DEFAULT NULL,
-  `GA_Trailer` varchar(255) DEFAULT NULL
+  `GA_Genre` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `game`
+--
+
+INSERT INTO `game` (`GA_ID`, `FK_GE_ID`, `GA_Name`, `GA_Description`, `GA_Platform`, `GA_Image`, `GA_Genre`) VALUES
+(1, 0, 'Fortnite', 'Fortnite is a 2017 video game developed by Epic Games which has been released as different software packages featuring different game modes that otherwise share the same general gameplay and game engine. The game modes include Fortnite: Save the World, a ', 'PC, PS4, XBox One, iOS, Android', 'https://blogs-images.forbes.com/erikkain/files/2018/07/Season-5-skins.jp', 'Shooter, Builder'),
+(2, 0, 'Destiny 2', 'Destiny 2 is an online-only multiplayer first-person shooter video game developed by Bungie and published by Activision. It was released for PlayStation 4 and Xbox One on September 6, 2017, followed by a Microsoft Windows version the following month. It i', 'PC, PS4, XBox One', 'https://am23.akamaized.net/tms/cnt/uploads/2017/09/F83YpiMXCUkeyE6JQ4TXki.jpg', 'FPS'),
+(3, 0, 'Sea of Thieves', 'Sea of Thieves is an action-adventure video game developed by Rare and published by Microsoft Studios for Windows 10 and Xbox One. The game allows players to take the role of a pirate sailing the seas of a fantastical world either solo or as part of a cre', 'PC, XBOX One', 'https://blogs-images.forbes.com/erikkain/files/2018/03/sea-of-thieves-4.jpg', 'Action'),
+(4, 0, 'Overwatch', 'Overwatch is a team-based multiplayer first-person shooter video game developed and published by Blizzard Entertainment, which released on May 24, 2016 for PlayStation 4, Xbox One, and Windows. Described as a \"hero shooter\", Overwatch assigns players into', 'PC, XBOX One, PS4', 'https://image.redbull.com/rbcom/010/2015-11-16/1331759970098_2/0100/0/1/overwatch-is-the-new-esports-shooter-game-from-blizzard.jpg', 'FPS'),
+(5, 0, 'Call of Duty Black Ops III', 'Call of Duty: Black Ops II is a first-person shooter developed by Treyarch and published by Activision. It was released for Microsoft Windows, PlayStation 3, and the Xbox 360 on November 13, 2012, and for the Wii U on November 18 in North America and Nove', 'PC, XBOX One, PS4, Wii-U', 'https://i.ytimg.com/vi/pj_q9JhyxUg/maxresdefault.jpg', 'FPS'),
+(6, 0, 'Battlefield 1', 'Battlefield 1 is a first-person shooter video game developed by EA DICE and published by Electronic Arts. Battlefield 1 is the fifteenth installment in the Battlefield series, and the first main entry in the series since Battlefield 4. It was released wor', 'PC, XBOX One, PS4', 'http://dice-wp-prd.s3.amazonaws.com/wp-content/uploads/2016/05/06204818/unnamed1.jpg', 'FPS'),
+(7, 0, 'Call of Duty: WWII', 'WWII is a first-person shooter video game developed by Sledgehammer Games and published by Activision. It was released worldwide on November 3, 2017 for Microsoft Windows, PlayStation 4 and Xbox One. It is the fourteenth main installment in the Call of Du', 'PC, XBOX One, PS4', 'https://blackfridayhits.com/wp-content/uploads/2017/09/Call-of-Duty-WWII-Black-Friday.jpg', 'FPS'),
+(8, 0, 'Elder Scrolls Online', 'As with other games in The Elder Scrolls franchise, the game is set in the continent of Tamriel and features a storyline indirectly connected with the other games. The Elder Scrolls Online had been in development for seven years before its release in 2014', 'PC, OSX', 'https://esosslfiles-a.akamaihd.net/cms/2018/03/2910589b3911d9fcaef7531386f35036.jpg', 'MMO-RPG'),
+(9, 0, 'Rainbow Six Siege', 'Rainbow Six Siege is a tactical shooter video game developed by Ubisoft Montreal and published by Ubisoft. Each player assumes control of an attacker or a defender in different gameplay modes such as rescuing a hostage and defusing a bomb. The title has n', 'PC, PS4, OSX', 'https://compass-ssl.xbox.com/assets/fc/9e/fc9e45bd-29b6-4a82-a43b-6f0b0b0d91cb.jpg?n=RSS-MWF_GLP-Page-Hero-1084_1920x600_02.jpg', 'FPS'),
+(10, 0, 'Rocket League', 'Described as \"soccer, but with rocket-powered cars\", Rocket League has one to four players assigned to each of the two teams, using rocket-powered vehicles to hit a ball into their opponent`s goal and score points over the course of a match. The game incl', 'PC, PS4, XBOX One, Wii-U', 'https://media.nintendo.com/nintendo/bin/kCKdDGy3o4pKSZMvmaf2rsaJCelSFo5Y/0paV3L7PPQjm0npoQF1B68_pL4O1FTWo.jpg', 'Sports'),
+(11, 0, 'FIFA 18', 'FIFA 18 is a football simulation video game in the FIFA series of video games, developed and published by Electronic Arts and was released worldwide on 29 September 2017', 'PC, PS4, XBOX One', 'https://media.contentapi.ea.com/content/dam/ea/easports/fifa/home/2018/world-cup-april30/top/f18wc-homepage-top-hero-bg-xs.jpg ', 'Sports'),
+(12, 0, 'For Honor', 'For Honor is a video game developed and published by Ubisoft for Microsoft Windows, PlayStation 4, and Xbox One. The game allows players to play the roles of historical forms of soldiers and warriors, including knights, samurai, and vikings within a medie', 'PC, PS4, XBOX One', 'https://i.ytimg.com/vi/sp3NKQlJPuo/maxresdefault.jpg', 'Action'),
+(13, 0, 'Ghost Recon Wildlands', 'Ghost Recon Wildlands is a tactical shooter video game developed by Ubisoft Paris and published by Ubisoft. The game moves away from the futuristic setting introduced in Ghost Recon Advanced Warfighter and instead feature a setting similar to the original', 'PC, PS4, XBOX One', 'https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2018/07/ghost%20recon%20wildlands.jpg?itok=-8C1U0SA', 'Tactical Shooter'),
+(14, 0, 'Halo 5', 'Halo 5: Guardians is a first-person shooter video game developed by 343 Industries and published by Microsoft Studios for the Xbox One home video game console. The tenth installment and fifth main entry in the Halo series of video games, it was released w', 'PC, XBOX One', 'https://image.halocdn.com/?path=https:%2F%2Fcontent.halocdn.com%2Fmedia%2FDefault%2Fgames%2Fhalo-5-guardians%2Fheroes%2Fhalo5-large-hero-1920x675-de822bb343a84943a22b87d95f95cd7c.jpg&leftCrop=400&rightCrop=400&hash=zWftjFsm38xGdJo8FYCTLBpPmf4cS4Siw0CdMem%', 'FPS'),
+(15, 0, 'Borderlands 2', 'Borderlands 2 allows players to complete a campaign consisting of central quests and optional side-missions as one of four (six including downloadable content) treasure seekers, \"Vault Hunters\", on the planet Pandora. Key gameplay features from its predec', 'PC, PS4, XBOX One', 'https://i.ytimg.com/vi/HDsTrzzMWxY/maxresdefault.jpg', 'FPS, RPG'),
+(16, 0, 'Player Unknown Battlegrounds', 'PlayerUnknown´s Battlegrounds (PUBG) is an online multiplayer battle royale game. In the game, up to one hundred players parachute onto an island and scavenge for weapons and equipment to kill others while avoiding getting killed themselves. The available', 'PC, XBox One, iOS, Android', 'https://upload.wikimedia.org/wikipedia/commons/6/62/PlayerUnknowns-Battlegrounds-1024x576.jpg', 'FPS'),
+(17, 0, 'The Division', 'Set in a near future New York City in the aftermath of a smallpox pandemic; the player, who is a Special Agent of the eponymous Strategic Homeland Division, commonly referred to simply as \"Division\", is tasked with helping the group rebuild its operations', 'PC, PS4, XBOX One', 'https://i.ytimg.com/vi/pwUGFb-hALk/maxresdefault.jpg', 'RPG'),
+(18, 0, 'GTA V', 'Set within the fictional state of San Andreas, based on Southern California, the single-player story follows three criminals and their efforts to commit heists while under pressure from a government agency. The open world design lets players freely roam S', 'PC, XBOX One, XBOX 360, PS4, PS3', 'https://cdn.images.dailystar.co.uk/dynamic/184/photos/60000/620x/GTA-5-Online-DLC-LEAKED-Massive-NEW-content-update-REVEALED-for-PS4-Xbox-and-PC-game-703933.jpg', 'Action, Adventure'),
+(19, 0, 'Forza Motorsport 7', 'Forza Motorsport 7 is a racing video game featuring over 700 cars—including new Forza Edition cars, most of which have been brought over from Forza Horizon 3—and more than 200 different configurations to race on across 32 locations at launch, including al', 'XBOX One', 'https://cdn.wccftech.com/wp-content/uploads/2018/02/february-forza-motorsport-7-update-3.jpg', 'Racing'),
+(20, 0, 'Forza Horizon 3', 'Forza Horizon 3 is a racing video game set in an open world environment based in a fictional representation of Australia. The gameplay world is expansive, twice the size of its predecessor in the series Forza Horizon 2, and includes locales such as Surfer', 'PC, XBOX One', 'http://compass.xboxlive.com/assets/c7/ea/c7ea2e87-d0a4-4855-a0b2-65c12cec644c.jpg?n=FH3_BM_carousel.jpg', 'Racing'),
+(21, 0, 'Mario Kart 8 Deluxe', 'Mario Kart 8 Deluxe is a racing game for the Nintendo Switch, and the first Mario game overall for the console. It is the first port of the Mario Kart series, being a port of Mario Kart 8 from the Wii U. It has additional features such as several new char', 'Wii-U', 'https://i.ytimg.com/vi/a3o_ZKWi-OU/maxresdefault.jpg', 'Racing'),
+(22, 0, 'Super Smash Bros.', 'Super Smash Bros. is a series of crossover fighting video games published by Nintendo.The gameplay objective differs from that of traditional fighters by aiming to knock opponents off the stage instead of depleting life bars. ', 'Wii-U', 'https://static.giga.de/wp-content/uploads/2018/03/Vorschau-Super-Smash-Bros.-fuer-Wii-U-thumbnail.jpg ', 'Fighting'),
+(23, 0, 'World of Warcraft', ' World of Warcraft is an online role-playing experience set in the award-winning Warcraft universe. Players assume the roles of Warcraft heroes as they explore, adventure, and quest across a vast world. Being \"Massively Multiplayer,\" World of Warcraft all', 'PC', 'https://images.g2a.com/newlayout/600x351/1x1x0/3f303e175002/5a4f88e55bafe38d90366a12 ', 'RPG'),
+(24, 0, 'Counter-Strike GO', 'Global Offensive, like prior games in the Counter-Strike series, is an objective-based, multiplayer first-person shooter. Two opposing teams, known as the Terrorists and the Counter Terrorists, compete in game modes to complete objectives, such as securin', 'PC, XBOX One, PS3', 'https://games4linux.de/wp-content/uploads/2016/03/maxresdefault-3.jpg', 'FPS'),
+(25, 0, 'NBA 2K18', 'NBA 2K18 is a basketball simulation game which, like the previous games in the series, strives to realistically depict the National Basketball Association (NBA), as well as present improvements over the previous installments. The player mainly plays NBA g', 'PC, XBOX One, PS4, Nintendo Switch', 'https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_NBA2K18_image1600w.jpg', 'Sports'),
+(26, 0, 'Warframe', 'Warframe is an online action game that includes elements of shooters and stealth games. In the science fiction setting of Warframe, players control members of the Tenno, a race of ancient warriors who have awoken from centuries of cryosleep to find themse', 'PC, XBOX One, PS4', 'http://n9e5v4d8.ssl.hwcdn.net/uploads/277cb62ca66b1693f3f6982e5e757869.png', 'Shooter'),
+(27, 0, 'Star Wars Battlefront 2', 'Star Wars Battlefront II is an action shooter video game based on the Star Wars film franchise. Star Wars Battlefront II features nine multiplayer game modes, some of which are available to play only for a limited time, with the largest supporting up to 4', 'PC, PS4, XBOX One', 'https://media.contentapi.ea.com/content/dam/walrus/launch-tips/customize-loadout.jpg.adapt.crop16x9.1080p.jpg.adapt.320w.jpg', 'Shooter');
 
 -- --------------------------------------------------------
 
@@ -1266,12 +1299,6 @@ ALTER TABLE `ban`
   ADD PRIMARY KEY (`B_ID`);
 
 --
--- Indizes für die Tabelle `game`
---
-ALTER TABLE `game`
-  ADD PRIMARY KEY (`GA_ID`);
-
---
 -- Indizes für die Tabelle `genre`
 --
 ALTER TABLE `genre`
@@ -1316,12 +1343,6 @@ ALTER TABLE `user`
 --
 ALTER TABLE `ban`
   MODIFY `B_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT für Tabelle `game`
---
-ALTER TABLE `game`
-  MODIFY `GA_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT für Tabelle `genre`
