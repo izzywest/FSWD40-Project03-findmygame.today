@@ -1,0 +1,98 @@
+/*Slider*/
+
+.slide1 {
+  background-image: url(../../img/slider/overwatch.jpg);
+}
+
+.slide2 {
+  background-image: url(../../img/slider/battlefront.jpg)
+}
+
+.slide3 {
+  background-image: url(../../img/slider/fortnite.jpg)
+}
+
+.slide4 {
+  background-image: url(../../img/slider/wow.jpg)
+}
+
+#slider {
+  width: 100vw;
+  height: 75vh;
+  overflow: hidden;
+  position: relative;
+  margin:0 auto;
+  border-bottom: $big-border;
+}
+
+#slider .slides {
+  display: flex;
+  width: 500vw;
+  height: 75vh;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  float: left;
+  list-style-type: none;
+  width: 100vw;
+  height: 75vh;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+
+.slide div {
+  margin: 15% 20%;
+  padding: .5em 3em .5em 1em;
+  left: 10%;
+  background-color: rgba(50,50,50,0.4);
+  width: 30%;
+}
+
+.slide div h2, .slide div h3, .slide div h4 {
+  color: $orange;
+  font-size: 5em;
+  text-transform: uppercase;
+}
+
+.slide div span {
+  color: $light;
+  font-size: 130%;
+  font-weight: bold;
+}
+
+.arrow {
+  height: 480px;
+  width: 50px;
+  background: rgba(0,0,0,0.0);
+  z-index: 99;
+  line-height:480px;
+  text-align:center;
+  color:#fff;
+}
+
+.arrow:hover { background: rgba(0,0,0,0.3); }
+
+.arrow-left {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.arrow-right {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.loading {
+  position: absolute;
+  width: 0px;
+  background-color: rgba(200,200,200,0.5);
+  bottom: 0;
+  height: 15px;
+  left: 0;
+  z-index: 999;
+}
