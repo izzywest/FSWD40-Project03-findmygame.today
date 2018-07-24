@@ -1,38 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Aldrich|Hammersmith+One|News+Cycle:400,700|Pragati+Narrow:400,700" rel="stylesheet">
-    <!--Style-->
-    <link rel="stylesheet" href="style/css/main.css">
-    <title>G4M3R5</title>
-</head>
-
-<body>
-
-    <header>
-        <div id="logo">
-            <img src="img/logo.png" alt="logo">
-        </div>
-
-        <nav>
-            <ul>
-                <li> <a href=""> <span class="nav-img"> <?php echo file_get_contents("img/icons/game.svg"); ?> </span>Games </a></li>
-                <li> <a href=""> <span class="nav-img"> <?php echo file_get_contents("img/icons/posts.svg"); ?> </span>Posts </a></li>
-                <li> <a href=""> <span class="nav-img"> <?php echo file_get_contents("img/icons/group.svg"); ?> </span>Groups </a></li>
-                <li> <a href=""> <span class="nav-img"> <?php echo file_get_contents("img/icons/user.svg"); ?> </span> </a></li>
-            </ul>
-        </nav>
-    </header>
+<?php include('inc/head.php'); ?>
     <!--Slider-->
-
         <div id="slider">
             <div class="loading"></div>
             <div class="arrow arrow-left">
@@ -73,21 +40,29 @@
     <!--Content-->
     <main>
         <div class="content">
-            Content
+            <section>
+            <h1>Sign up now</h1>
+                <form id="reg-form" action="">
+                    <div class="form-block">
+                    <input type="text" class="css-input" placeholder="E-Mail">
+                    <input type="text" class="css-input" placeholder="Username">
+                    </div>
+                    <div class="form-block">
+                    <input type="text" class="css-input" placeholder="First Name">
+                    <input type="text" class="css-input" placeholder="Last Name">
+                    <input type="text" class="css-input" placeholder="Age">
+                    </div>
+                    <div class="form-block">
+                    <input type="text" class="css-input" placeholder="Address">
+                    <input type="text" class="css-input" placeholder="ZIP and City">
+                    <input type="text" class="css-input" placeholder="Region">
+                    </div>
+                    <input class="btn" type="submit" value="Submit">
+                </form>
+            </section>
         </div>
-        <aside>
+        <!-- <aside>
             Sidebar
-        </aside>
+        </aside> -->
     </main>
-    
-    <!--Footer-->
-    <footer>
-        Footer
-    </footer>
-
-    <!--Scritps-->
-    <script src="js/sliders.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+<?php include('inc/footer.php'); ?>
