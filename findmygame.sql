@@ -111,17 +111,6 @@ INSERT INTO `game` (`GA_ID`, `GA_Name`, `GA_Description`, `GA_Platform`, `GA_Ima
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `genre`
---
-
-CREATE TABLE `genre` (
-  `GE_ID` int(11) NOT NULL,
-  `GE_Name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Tabellenstruktur für Tabelle `groups`
 --
 
