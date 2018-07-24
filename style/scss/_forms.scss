@@ -1,5 +1,18 @@
+#reg-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 /* text input field style */
-        
+        input {
+            height: 50px;
+        }
         .css-input {
             border-width: 2px;
             border-style: solid;
@@ -11,6 +24,8 @@
             /* box-shadow: 0px 0px 5px 0px rgba(50, 58, 66, .75); */
             font-family: monospace;
             text-shadow: -50px 0px 9px rgba(42, 42, 42, .100);
+            margin-bottom: 10px;
+            margin-left: 10px;
         }
         
         .css-input:focus {
@@ -122,12 +137,12 @@
             left: 0;
             height: 25px;
             width: 25px;
-            background-color: #efdfda;
+            background-color: $light;
         }
         /* On mouse-over, add a grey background color */
         
         .container:hover input~.checkmark {
-            background-color: #efdfda;
+            background-color: $light;
         }
         /* When the checkbox is checked, add a blue background */
         
@@ -239,6 +254,7 @@
             color: $light;
             background-color: $mainColor;
             border-color: $thirdColor;
+            cursor: pointer;
         }
         
         .btn:focus {
