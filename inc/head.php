@@ -24,9 +24,9 @@
 
         <nav>
             <ul>
-                <li> <a href=""> <span class="nav-img"> <?php echo file_get_contents("img/icons/game.svg"); ?> </span>Games </a></li>
-                <li> <a href=""> <span class="nav-img"> <?php echo file_get_contents("img/icons/posts.svg"); ?> </span>Posts </a></li>
-                <li> <a href=""> <span class="nav-img"> <?php echo file_get_contents("img/icons/group.svg"); ?> </span>Groups </a></li>
+                <li> <a href="games.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/game.svg"); ?> </span>Games </a></li>
+                <li> <a href="posts.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/posts.svg"); ?> </span>Posts </a></li>
+                <li> <a href="groups.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/group.svg"); ?> </span>Groups </a></li>
                 <li> <a href=""> <span class="nav-img"> <?php echo file_get_contents("img/icons/user.svg"); ?> </span> </a></li>
             </ul>
         </nav>
