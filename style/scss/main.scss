@@ -1,4 +1,5 @@
 @import "general";
+@import "slider";
 
 /*Main Layout*/
 body {
@@ -16,6 +17,49 @@ header {
     width: 100vw;
     z-index: 2;
     background: #fff;
+    border-bottom: $big-border;
+}
+
+nav {
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a{
+    height: 100%;
+    width: 50px;
+    margin: 0 $pagePadding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: $secColor;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-img {
+    height: 50px;
+}
+
+.svgback {
+    fill: $secColor;
+}
+.svgfront {
+    fill: $light;
+}
+
+nav ul li a:hover {
+    color: $mainColor;
+}
+
+nav ul li a:hover .svgback {
+    fill: $mainColor;
 }
 
 #logo img {
@@ -37,4 +81,7 @@ aside {
 
 footer {
     padding: $pagePadding;
+    border-top: $big-border;
+    background: $secColor;
+    color: $light;
 }

@@ -278,9 +278,17 @@ label {
           box-sizing: border-box;
 }
 
+body {
+  font-family: "News Cycle";
+}
+
 /*text*/
 a {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Hammersmith One", sans-serif;
 }
 
 .avatar-small {
@@ -292,6 +300,107 @@ a {
 .icon-small {
   width: 22px;
   height: 22px;
+}
+
+/*Slider*/
+.slide1 {
+  background-image: url(../../img/slider/overwatch.jpg);
+}
+
+.slide2 {
+  background-image: url(../../img/slider/battlefront.jpg);
+}
+
+.slide3 {
+  background-image: url(../../img/slider/fortnite.jpg);
+}
+
+.slide4 {
+  background-image: url(../../img/slider/wow.jpg);
+}
+
+#slider {
+  width: 100vw;
+  height: 75vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  border-bottom: 5px solid #4a48a9;
+}
+
+#slider .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500vw;
+  height: 75vh;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  float: left;
+  list-style-type: none;
+  width: 100vw;
+  height: 75vh;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.slide div {
+  margin: 15% 20%;
+  padding: .5em 3em .5em 1em;
+  left: 10%;
+  background-color: rgba(50, 50, 50, 0.4);
+  width: 30%;
+}
+
+.slide div h2, .slide div h3, .slide div h4 {
+  color: #ffa500;
+  font-size: 5em;
+  text-transform: uppercase;
+}
+
+.slide div span {
+  color: #e4dfda;
+  font-size: 130%;
+  font-weight: bold;
+}
+
+.arrow {
+  height: 480px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0);
+  z-index: 99;
+  line-height: 480px;
+  text-align: center;
+  color: #fff;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.arrow-left {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.arrow-right {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.loading {
+  position: absolute;
+  width: 0px;
+  background-color: rgba(200, 200, 200, 0.5);
+  bottom: 0;
+  height: 15px;
+  left: 0;
+  z-index: 999;
 }
 
 /*Main Layout*/
@@ -321,6 +430,63 @@ header {
   width: 100vw;
   z-index: 2;
   background: #fff;
+  border-bottom: 5px solid #4a48a9;
+}
+
+nav {
+  height: 100%;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+nav ul li a {
+  height: 100%;
+  width: 50px;
+  margin: 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #253444;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-img {
+  height: 50px;
+}
+
+.svgback {
+  fill: #253444;
+}
+
+.svgfront {
+  fill: #e4dfda;
+}
+
+nav ul li a:hover {
+  color: #4a48a9;
+}
+
+nav ul li a:hover .svgback {
+  fill: #4a48a9;
 }
 
 #logo img {
@@ -347,5 +513,8 @@ aside {
 
 footer {
   padding: 25px;
+  border-top: 5px solid #4a48a9;
+  background: #253444;
+  color: #e4dfda;
 }
 /*# sourceMappingURL=main.css.map */
