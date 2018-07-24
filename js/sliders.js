@@ -46,15 +46,15 @@
         $('.loading').stop().css('width','0');
     }
     
-    $('#slider').on('mouseenter', function()    {
-        $('.slides').finish();        
-        clearLoading();
-        stopSlider();
-    }).on('mouseleave', function()  {
-        stopSlider()
-        timeout = setTimeout(init, 3000)
-        }
-    );
+    // $('#slider').on('mouseenter', function()    {
+    //     $('.slides').finish();        
+    //     clearLoading();
+    //     stopSlider();
+    // }).on('mouseleave', function()  {
+    //     stopSlider()
+    //     timeout = setTimeout(init, 3000)
+    //     }
+    // );
     
     $('.arrow-left').click(function()    {
         if (currentSlide > 1)   {
