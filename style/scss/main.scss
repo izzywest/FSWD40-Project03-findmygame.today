@@ -73,10 +73,31 @@ main {
   justify-content: space-between;
 }
 
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  -webkit-filter: blur(5px) opacity(25%);;
+  -moz-filter: blur(5px) opacity(25%);;
+  -o-filter: blur(5px) opacity(25%);;
+  -ms-filter: blur(5px) opacity(25%);;
+  filter: blur(5px) opacity(25%);;
+}
+
+#about {
+    background-image: url('https://slotopaint.com/wp-content/uploads/2016/05/Legendlore_slide_06.jpg');
+}
 
 aside {
     width: 300px;
     background: $mainColor;
+    padding: $pagePadding;
 }
 
 footer {
