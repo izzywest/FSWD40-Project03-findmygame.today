@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
--- http://www.phpmyadmin.net
+-- version 4.8.0.1
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 24, 2018 at 08:59 AM
--- Server version: 5.7.22-0ubuntu0.16.04.1
--- PHP Version: 7.1.19-1+ubuntu16.04.1+deb.sury.org+1
+-- Host: 127.0.0.1
+-- Erstellungszeit: 24. Jul 2018 um 20:34
+-- Server-Version: 10.1.32-MariaDB
+-- PHP-Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,54 +19,54 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `findmygame`
+-- Datenbank: `findmygame`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `BAN`
+-- Tabellenstruktur für Tabelle `ban`
 --
 
-CREATE TABLE `BAN` (
+CREATE TABLE `ban` (
   `B_ID` int(11) NOT NULL,
-  `B_Status` varchar(50) DEFAULT NULL,
+  `B_Status` tinyint(1) DEFAULT NULL,
   `B_Duration` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `BAN`
+-- Daten für Tabelle `ban`
 --
 
-INSERT INTO `BAN` (`B_ID`, `B_Status`, `B_Duration`) VALUES
-(1, '1', '2017-03-29'),
-(2, '0', '2016-07-18'),
-(3, '0', '2017-10-19'),
-(4, '0', '2016-06-21'),
-(5, '0', '2018-04-13'),
-(6, '1', '2015-07-10'),
-(7, '1', '2016-01-02'),
-(8, '0', '2017-04-18'),
-(9, '0', '2018-07-01'),
-(10, '0', '2016-03-03'),
-(11, '1', '2016-06-13'),
-(12, '1', '2016-05-25'),
-(13, '0', '2017-07-18'),
-(14, '1', '2016-06-18'),
-(15, '1', '2017-02-12'),
-(16, '1', '2015-11-20'),
-(17, '0', '2016-01-11'),
-(18, '0', '2017-08-30'),
-(19, '0', '2016-12-03'),
-(20, '0', '2018-02-26');
+INSERT INTO `ban` (`B_ID`, `B_Status`, `B_Duration`) VALUES
+(1, 1, '2017-03-29'),
+(2, 0, '2016-07-18'),
+(3, 0, '2017-10-19'),
+(4, 0, '2016-06-21'),
+(5, 0, '2018-04-13'),
+(6, 1, '2015-07-10'),
+(7, 1, '2016-01-02'),
+(8, 0, '2017-04-18'),
+(9, 0, '2018-07-01'),
+(10, 0, '2016-03-03'),
+(11, 1, '2016-06-13'),
+(12, 1, '2016-05-25'),
+(13, 0, '2017-07-18'),
+(14, 1, '2016-06-18'),
+(15, 1, '2017-02-12'),
+(16, 1, '2015-11-20'),
+(17, 0, '2016-01-11'),
+(18, 0, '2017-08-30'),
+(19, 0, '2016-12-03'),
+(20, 0, '2018-02-26');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `GAME`
+-- Tabellenstruktur für Tabelle `game`
 --
 
-CREATE TABLE `GAME` (
+CREATE TABLE `game` (
   `GA_ID` int(11) NOT NULL,
   `FK_GE_ID` int(11) NOT NULL,
   `GA_Name` varchar(255) DEFAULT NULL,
@@ -72,37 +74,37 @@ CREATE TABLE `GAME` (
   `GA_Logo` varchar(255) DEFAULT NULL,
   `GA_Image` varchar(255) DEFAULT NULL,
   `GA_Trailer` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `GENRE`
+-- Tabellenstruktur für Tabelle `genre`
 --
 
-CREATE TABLE `GENRE` (
+CREATE TABLE `genre` (
   `GE_ID` int(11) NOT NULL,
   `GE_Name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `GROUPS`
+-- Tabellenstruktur für Tabelle `groups`
 --
 
-CREATE TABLE `GROUPS` (
+CREATE TABLE `groups` (
   `GR_ID` int(11) NOT NULL,
-  `GR_Name` varchar(50) DEFAULT NULL,
+  `GR_Name` varchar(255) DEFAULT NULL,
   `GR_Capacity` int(11) DEFAULT NULL,
-  `GR_Image` varchar(76) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `GR_Image` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `GROUPS`
+-- Daten für Tabelle `groups`
 --
 
-INSERT INTO `GROUPS` (`GR_ID`, `GR_Name`, `GR_Capacity`, `GR_Image`) VALUES
+INSERT INTO `groups` (`GR_ID`, `GR_Name`, `GR_Capacity`, `GR_Image`) VALUES
 (1, 'Sub-Ex', 21, 'https://d30zbujsp7ao6j.cloudfront.net/wp-content/uploads/2017/07/unnamed.png'),
 (2, 'Aerified', 88, 'https://d30zbujsp7ao6j.cloudfront.net/wp-content/uploads/2017/07/unnamed.png'),
 (3, 'Tres-Zap', 25, 'https://d30zbujsp7ao6j.cloudfront.net/wp-content/uploads/2017/07/unnamed.png'),
@@ -157,32 +159,32 @@ INSERT INTO `GROUPS` (`GR_ID`, `GR_Name`, `GR_Capacity`, `GR_Image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `PERMISSION`
+-- Tabellenstruktur für Tabelle `permission`
 --
 
-CREATE TABLE `PERMISSION` (
+CREATE TABLE `permission` (
   `PE_ID` int(11) NOT NULL,
   `PE_Type` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `PLATFORM`
+-- Tabellenstruktur für Tabelle `platform`
 --
 
-CREATE TABLE `PLATFORM` (
+CREATE TABLE `platform` (
   `PL_ID` int(11) NOT NULL,
   `FK_GA_ID` int(11) NOT NULL,
   `PL_Name` varchar(255) DEFAULT NULL,
   `PL_Logo` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `PLATFORM`
+-- Daten für Tabelle `platform`
 --
 
-INSERT INTO `PLATFORM` (`PL_ID`, `FK_GA_ID`, `PL_Name`, `PL_Logo`) VALUES
+INSERT INTO `platform` (`PL_ID`, `FK_GA_ID`, `PL_Name`, `PL_Logo`) VALUES
 (1, 1, 'PC', 'https://image.freepik.com/free-vector/logo-template-background_1390-55.jpg'),
 (2, 1, 'XBOX', 'https://image.freepik.com/free-vector/logo-template-background_1390-55.jpg'),
 (3, 1, 'Playstation', 'https://image.freepik.com/free-vector/logo-template-background_1390-55.jpg');
@@ -190,22 +192,22 @@ INSERT INTO `PLATFORM` (`PL_ID`, `FK_GA_ID`, `PL_Name`, `PL_Logo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `POSTS`
+-- Tabellenstruktur für Tabelle `posts`
 --
 
-CREATE TABLE `POSTS` (
+CREATE TABLE `posts` (
   `PO_ID` int(11) NOT NULL,
   `FK_GA_ID` int(11) NOT NULL,
   `PO_DateTime` datetime DEFAULT NULL,
-  `PO_Headline` varchar(50) DEFAULT NULL,
-  `PO_Description` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `PO_Headline` varchar(255) DEFAULT NULL,
+  `PO_Description` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `POSTS`
+-- Daten für Tabelle `posts`
 --
 
-INSERT INTO `POSTS` (`PO_ID`, `FK_GA_ID`, `PO_DateTime`, `PO_Headline`, `PO_Description`) VALUES
+INSERT INTO `posts` (`PO_ID`, `FK_GA_ID`, `PO_DateTime`, `PO_Headline`, `PO_Description`) VALUES
 (1, 1, '2015-10-07 14:50:16', 'enhance sticky infrastructures', 'Blood vessel dx proc NEC'),
 (2, 1, '2016-06-11 21:43:04', 'synthesize 24/7 applications', 'Interposit op uterin lig'),
 (3, 1, '2018-06-27 18:24:17', 'whiteboard best-of-breed web services', 'Elevate skull fx fragmnt'),
@@ -760,7 +762,7 @@ INSERT INTO `POSTS` (`PO_ID`, `FK_GA_ID`, `PO_DateTime`, `PO_Headline`, `PO_Desc
 (552, 1, '2017-11-22 19:31:04', 'revolutionize B2C users', 'Destruc-foot jt les NEC'),
 (553, 1, '2015-12-09 20:43:57', 'whiteboard compelling markets', 'Thyroid reimplantation'),
 (554, 1, '2016-05-09 14:54:13', 'synthesize clicks-and-mortar architectures', 'Thorac drain pleurl cav');
-INSERT INTO `POSTS` (`PO_ID`, `FK_GA_ID`, `PO_DateTime`, `PO_Headline`, `PO_Description`) VALUES
+INSERT INTO `posts` (`PO_ID`, `FK_GA_ID`, `PO_DateTime`, `PO_Headline`, `PO_Description`) VALUES
 (555, 1, '2016-12-22 23:08:41', 'e-enable efficient metrics', 'Fit ext penile prosthes'),
 (556, 1, '2017-05-02 01:44:27', 'harness dynamic web services', 'Pharyngeal dx proc NEC'),
 (557, 1, '2015-12-19 16:54:14', 'transform wireless schemas', 'Perc ins intracran stent'),
@@ -1211,133 +1213,153 @@ INSERT INTO `POSTS` (`PO_ID`, `FK_GA_ID`, `PO_DateTime`, `PO_Headline`, `PO_Desc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `USER`
+-- Tabellenstruktur für Tabelle `user`
 --
 
-CREATE TABLE `USER` (
-  `U_ID` int(11) DEFAULT NULL,
+CREATE TABLE `user` (
+  `U_ID` int(11) NOT NULL,
   `FK_PE_ID` int(11) DEFAULT NULL,
-  `FK_I_ID` varchar(1) DEFAULT NULL,
-  `FK_B_ID` varchar(1) DEFAULT NULL,
-  `FK_PL_ID` varchar(1) DEFAULT NULL,
-  `FK_GR_ID` varchar(1) DEFAULT NULL,
-  `FK_PO_ID` varchar(1) DEFAULT NULL,
-  `U_Username` varchar(50) DEFAULT NULL,
-  `U_Pass` varchar(50) DEFAULT NULL,
-  `U_Email` varchar(50) DEFAULT NULL,
-  `U_Status` varchar(50) DEFAULT NULL,
-  `U_Firstname` varchar(50) DEFAULT NULL,
-  `U_Lastname` varchar(50) DEFAULT NULL,
+  `FK_I_ID` int(1) DEFAULT NULL,
+  `FK_B_ID` int(1) DEFAULT NULL,
+  `FK_PL_ID` int(1) DEFAULT NULL,
+  `FK_GR_ID` int(1) DEFAULT NULL,
+  `FK_PO_ID` int(1) DEFAULT NULL,
+  `U_Username` varchar(255) DEFAULT NULL,
+  `U_Pass` varchar(255) DEFAULT NULL,
+  `U_Email` varchar(255) DEFAULT NULL,
+  `U_Status` tinyint(1) DEFAULT NULL,
+  `U_Firstname` varchar(255) DEFAULT NULL,
+  `U_Lastname` varchar(255) DEFAULT NULL,
   `U_Age` int(11) DEFAULT NULL,
-  `U_Address` varchar(50) DEFAULT NULL,
-  `U_City` varchar(50) DEFAULT NULL,
-  `U_Region` varchar(13) DEFAULT NULL,
-  `U_Avatar` varchar(70) DEFAULT NULL,
-  `U_Rank` varchar(12) DEFAULT NULL,
-  `U_Socials` varchar(9) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `U_Address` varchar(255) DEFAULT NULL,
+  `U_City` varchar(255) DEFAULT NULL,
+  `U_Region` varchar(255) DEFAULT NULL,
+  `U_Avatar` varchar(255) DEFAULT NULL,
+  `U_Rank` varchar(255) DEFAULT NULL,
+  `U_Socials` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `USER`
+-- Daten für Tabelle `user`
 --
 
-INSERT INTO `USER` (`U_ID`, `FK_PE_ID`, `FK_I_ID`, `FK_B_ID`, `FK_PL_ID`, `FK_GR_ID`, `FK_PO_ID`, `U_Username`, `U_Pass`, `U_Email`, `U_Status`, `U_Firstname`, `U_Lastname`, `U_Age`, `U_Address`, `U_City`, `U_Region`, `U_Avatar`, `U_Rank`, `U_Socials`) VALUES
-(1, 1, '1', '1', '1', '1', '1', 'rtrenholm0', 's4jr27W2sQxj', 'rtrenholm0@mayoclinic.com', '0', 'Reginald', 'Trenholm', 40, '07465 Stuart Point', 'Qingyang', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Steam'),
-(2, 1, '1', '1', '1', '1', '1', 'bhallaways1', 'mCQq1ai54q', 'bhallaways1@cnbc.com', '0', 'Bail', 'Hallaways', 19, '30 Morning Road', 'Lokatadho', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Battlenet'),
-(3, 1, '1', '1', '1', '1', '1', 'lmctrusty2', 'hCibvyEPX', 'lmctrusty2@wired.com', '0', 'Lemmie', 'McTrusty', 49, '9599 Warrior Park', 'Covas', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
-(4, 1, '1', '1', '1', '1', '1', 'lballsdon3', '1twZzNCAj', 'lballsdon3@springer.com', '1', 'Lelah', 'Ballsdon', 50, '860 Heffernan Plaza', 'Yangjiaping', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Discord'),
-(5, 1, '1', '1', '1', '1', '1', 'ojoll4', 'QcRdv9x', 'ojoll4@rediff.com', '1', 'Olga', 'Joll', 41, '7274 Village Green Terrace', 'Aramayuan', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Twitch'),
-(6, 1, '1', '1', '1', '1', '1', 'rblindermann5', '1Rr3jPA', 'rblindermann5@ucoz.ru', '0', 'Rois', 'Blindermann', 19, '548 Ryan Alley', 'Dayr Ab? ?a‘?f', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'TeamSpeak'),
-(7, 1, '1', '1', '1', '1', '1', 'pbouch6', 'uUMiMoK2g8', 'pbouch6@typepad.com', '0', 'Patrice', 'Bouch', 23, '9 Aberg Crossing', 'Kemuning', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Battlenet'),
-(8, 1, '1', '1', '1', '1', '1', 'gbratt7', 'PzgI9at1', 'gbratt7@ifeng.com', '1', 'Gino', 'Bratt', 30, '0982 Crowley Road', 'Aikmel', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Discord'),
-(9, 1, '1', '1', '1', '1', '1', 'dwarkup8', '44bgua', 'dwarkup8@oracle.com', '0', 'Daisey', 'Warkup', 21, '1628 Browning Center', 'Singida', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'TeamSpeak'),
-(10, 1, '1', '1', '1', '1', '1', 'ochristescu9', 'zMdw2gc5H', 'ochristescu9@sitemeter.com', '1', 'Olimpia', 'Christescu', 18, '9 Sunfield Parkway', 'Honolulu', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Origin');
+INSERT INTO `user` (`U_ID`, `FK_PE_ID`, `FK_I_ID`, `FK_B_ID`, `FK_PL_ID`, `FK_GR_ID`, `FK_PO_ID`, `U_Username`, `U_Pass`, `U_Email`, `U_Status`, `U_Firstname`, `U_Lastname`, `U_Age`, `U_Address`, `U_City`, `U_Region`, `U_Avatar`, `U_Rank`, `U_Socials`) VALUES
+(1, 1, 1, 1, 1, 1, 1, 'rtrenholm0', 's4jr27W2sQxj', 'rtrenholm0@mayoclinic.com', 0, 'Reginald', 'Trenholm', 40, '07465 Stuart Point', 'Qingyang', 'South America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Steam'),
+(2, 1, 1, 1, 1, 1, 1, 'bhallaways1', 'mCQq1ai54q', 'bhallaways1@cnbc.com', 0, 'Bail', 'Hallaways', 19, '30 Morning Road', 'Lokatadho', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Battlenet'),
+(3, 1, 1, 1, 1, 1, 1, 'lmctrusty2', 'hCibvyEPX', 'lmctrusty2@wired.com', 0, 'Lemmie', 'McTrusty', 49, '9599 Warrior Park', 'Covas', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Skype'),
+(4, 1, 1, 1, 1, 1, 1, 'lballsdon3', '1twZzNCAj', 'lballsdon3@springer.com', 1, 'Lelah', 'Ballsdon', 50, '860 Heffernan Plaza', 'Yangjiaping', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Discord'),
+(5, 1, 1, 1, 1, 1, 1, 'ojoll4', 'QcRdv9x', 'ojoll4@rediff.com', 1, 'Olga', 'Joll', 41, '7274 Village Green Terrace', 'Aramayuan', 'Africa', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Twitch'),
+(6, 1, 1, 1, 1, 1, 1, 'rblindermann5', '1Rr3jPA', 'rblindermann5@ucoz.ru', 0, 'Rois', 'Blindermann', 19, '548 Ryan Alley', 'Dayr Ab? ?a??f', 'Europe', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'TeamSpeak'),
+(7, 1, 1, 1, 1, 1, 1, 'pbouch6', 'uUMiMoK2g8', 'pbouch6@typepad.com', 0, 'Patrice', 'Bouch', 23, '9 Aberg Crossing', 'Kemuning', 'North America', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Intermediate', 'Battlenet'),
+(8, 1, 1, 1, 1, 1, 1, 'gbratt7', 'PzgI9at1', 'gbratt7@ifeng.com', 1, 'Gino', 'Bratt', 30, '0982 Crowley Road', 'Aikmel', 'Asia', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'Discord'),
+(9, 1, 1, 1, 1, 1, 1, 'dwarkup8', '44bgua', 'dwarkup8@oracle.com', 0, 'Daisey', 'Warkup', 21, '1628 Browning Center', 'Singida', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Beginner', 'TeamSpeak'),
+(10, 1, 1, 1, 1, 1, 1, 'ochristescu9', 'zMdw2gc5H', 'ochristescu9@sitemeter.com', 1, 'Olimpia', 'Christescu', 18, '9 Sunfield Parkway', 'Honolulu', 'Oceania', 'http://www.colchestersun.com/wp-content/uploads/2018/01/user-dummy.png', 'Expert', 'Origin');
 
 --
--- Indexes for dumped tables
+-- Indizes der exportierten Tabellen
 --
 
 --
--- Indexes for table `BAN`
+-- Indizes für die Tabelle `ban`
 --
-ALTER TABLE `BAN`
+ALTER TABLE `ban`
   ADD PRIMARY KEY (`B_ID`);
 
 --
--- Indexes for table `GAME`
+-- Indizes für die Tabelle `game`
 --
-ALTER TABLE `GAME`
+ALTER TABLE `game`
   ADD PRIMARY KEY (`GA_ID`);
 
 --
--- Indexes for table `GENRE`
+-- Indizes für die Tabelle `genre`
 --
-ALTER TABLE `GENRE`
+ALTER TABLE `genre`
   ADD PRIMARY KEY (`GE_ID`);
 
 --
--- Indexes for table `GROUPS`
+-- Indizes für die Tabelle `groups`
 --
-ALTER TABLE `GROUPS`
+ALTER TABLE `groups`
   ADD PRIMARY KEY (`GR_ID`);
 
 --
--- Indexes for table `PERMISSION`
+-- Indizes für die Tabelle `permission`
 --
-ALTER TABLE `PERMISSION`
+ALTER TABLE `permission`
   ADD PRIMARY KEY (`PE_ID`);
 
 --
--- Indexes for table `PLATFORM`
+-- Indizes für die Tabelle `platform`
 --
-ALTER TABLE `PLATFORM`
+ALTER TABLE `platform`
   ADD PRIMARY KEY (`PL_ID`);
 
 --
--- Indexes for table `POSTS`
+-- Indizes für die Tabelle `posts`
 --
-ALTER TABLE `POSTS`
+ALTER TABLE `posts`
   ADD PRIMARY KEY (`PO_ID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indizes für die Tabelle `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`U_ID`);
+
+--
+-- AUTO_INCREMENT für exportierte Tabellen
 --
 
 --
--- AUTO_INCREMENT for table `BAN`
+-- AUTO_INCREMENT für Tabelle `ban`
 --
-ALTER TABLE `BAN`
+ALTER TABLE `ban`
   MODIFY `B_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
 --
--- AUTO_INCREMENT for table `GAME`
+-- AUTO_INCREMENT für Tabelle `game`
 --
-ALTER TABLE `GAME`
+ALTER TABLE `game`
   MODIFY `GA_ID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `GENRE`
+-- AUTO_INCREMENT für Tabelle `genre`
 --
-ALTER TABLE `GENRE`
+ALTER TABLE `genre`
   MODIFY `GE_ID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `GROUPS`
+-- AUTO_INCREMENT für Tabelle `groups`
 --
-ALTER TABLE `GROUPS`
+ALTER TABLE `groups`
   MODIFY `GR_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
 --
--- AUTO_INCREMENT for table `PERMISSION`
+-- AUTO_INCREMENT für Tabelle `permission`
 --
-ALTER TABLE `PERMISSION`
+ALTER TABLE `permission`
   MODIFY `PE_ID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `PLATFORM`
+-- AUTO_INCREMENT für Tabelle `platform`
 --
-ALTER TABLE `PLATFORM`
+ALTER TABLE `platform`
   MODIFY `PL_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT for table `POSTS`
+-- AUTO_INCREMENT für Tabelle `posts`
 --
-ALTER TABLE `POSTS`
+ALTER TABLE `posts`
   MODIFY `PO_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
+
+--
+-- AUTO_INCREMENT für Tabelle `user`
+--
+ALTER TABLE `user`
+  MODIFY `U_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
