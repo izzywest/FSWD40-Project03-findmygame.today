@@ -278,9 +278,17 @@ label {
           box-sizing: border-box;
 }
 
+body {
+  font-family: "News Cycle";
+}
+
 /*text*/
 a {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Hammersmith One", sans-serif;
 }
 
 .avatar-small {
@@ -342,7 +350,7 @@ header {
 
 .username {
   padding: 25px;
-  font-family: "Aldrich", sans-serif;
+  font-family: "Hammersmith One", sans-serif;
   color: #4a48a9;
 }
 
