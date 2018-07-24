@@ -37,19 +37,19 @@
 </table>
 
 <form method="post">
-	<input type="text" name="id">
-	<input type="password" name="pass">
-	<input type="email" name="email">
-	<input type="text" name="firstname">
-	<input type="text" name="lastname">
-	<input type="text" name="age">
-	<input type="text" name="address">
-	<input type="text" name="city">
-	<input type="text" name="region">
-	<input type="text" name="avatar">
-	<input type="text" name="rank">
-	<input type="text" name="socials">
-	<input type="submit" name="submit">
+	<input class="css-input" value="id" type="text" name="id">
+	<input class="css-input" value="pass" type="password" name="pass">
+	<input class="css-input" value="email" type="email" name="email">
+	<input class="css-input" value="firstname" type="text" name="firstname">
+	<input class="css-input" value="lastname" type="text" name="lastname">
+	<input class="css-input" value="age" type="text" name="age">
+	<input class="css-input" value="address" type="text" name="address">
+	<input class="css-input" value="city" type="text" name="city">
+	<input class="css-input" value="region" type="text" name="region">
+	<input class="css-input" value="avatar" type="text" name="avatar">
+	<input class="css-input" value="rank" type="text" name="rank">
+	<input class="css-input" value="socials" type="text" name="socials">
+	<input class="css-input" value="submit" type="submit" name="submit">
 </form>
 
 <?php 
