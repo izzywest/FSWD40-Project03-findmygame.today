@@ -58,20 +58,20 @@
 		}
 
 		// EXECUTE THE PREPARED STATEMENT
-		public function exectute(){
+		public function execute(){
 			return $this->stmt->execute();
 		}
 
 		// GET RESULT SET AS ARRAY OF OBJECT
 		public function getResultSet(){
 			$this->execute();
-			return $this->stmt->fetchALL(PDO::FETCH_OBJ);
+			return $this->stmt->fetchall(PDO::FETCH_ASSOC);
 		}
 
 		// GET RESULT OF SINGLE OBJECT
 		public function getSingle(){
 			$this->execute();
-			return $this->stmt->fetch(PDO::FETCH_OBJ);
+			return $this->stmt->fetch(PDO::FETCH_ASSOC);
 		}
 
 		// GET ROWCOUNT
