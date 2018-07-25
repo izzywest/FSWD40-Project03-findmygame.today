@@ -1,4 +1,4 @@
-<?php $pageTitle='Groups'; ?>
+<?php $pageTitle='Events'; ?>
 <?php include('inc/head.php'); ?>
 <?php include('config/Database.php'); ?>
 <?php
