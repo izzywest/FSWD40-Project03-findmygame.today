@@ -17,18 +17,50 @@
 </head>
 
 <body>
+<?php 
+
+    session_start();
+
+    include_once('./config/Database.php');
+
+    $error = array();
+    $response = array();
+    $success = '';
+
+    // VALIDATE
+    $user_login = new Database();
+
+if($user_login->isLoggedIn()!="")
+{
+ $user_login->redirect('index.php');
+}
+
+if(isset($_POST['btn-login']))
+{
+ $username = trim($_POST['username']);
+ $pass = trim($_POST['password']);
+ 
+ if($user_login->login($username,$pass))
+ {
+  $user_login->header('./dashboard/index.php');
+ }
+}
+?>
 
     <header>
         <a href="index.php" id="logo">
             <img src="img/logo.png" alt="logo">
         </a>
         <h1 class="pageTitle"><?php echo $pageTitle; ?></h1>
-        <nav>
+        <nav>      
+                <form method="POST">
+                <input type="text" class="css-input" placeholder="Username" name="username">
+                <input type="password" class="css-input" placeholder="Password" name="password">
+                <input class="btn" type="submit" value="Login" name="btn-login">
+                <input class="btn" type="submit" value="Logout">
+                </form>
+
             <ul>
-                <li><input type="text" class="css-input" placeholder="Username"></li>
-                <li><input type="password" class="css-input" placeholder="Password"></li>
-                <li><input class="btn" type="submit" value="Login"></li>
-                <li><input class="btn" type="submit" value="Logout"></li>
                 <li> <a href="games.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/game.svg"); ?> </span>Games </a></li>
                 <li> <a href="posts.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/posts.svg"); ?> </span>Posts </a></li>
                 <li> <a href="groups.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/group.svg"); ?> </span>Groups </a></li>
@@ -36,3 +68,4 @@
             </ul>
         </nav>
     </header>
+
