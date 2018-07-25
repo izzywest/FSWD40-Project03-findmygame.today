@@ -336,8 +336,15 @@ h1.pageTitle {
 }
 
 .content {
-  width: 100%;
+  width: 80%;
   padding-right: 25px;
+}
+
+aside {
+  width: 20%;
+  background: #4a48a9;
+  padding: 25px;
+  margin-bottom: auto;
 }
 
 section {
@@ -603,14 +610,17 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .game-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 
 .game-image {
@@ -658,12 +668,78 @@ main {
 .game-meta {
   width: 50%;
   line-height: 35px;
+  position: relative;
 }
 
-aside {
-  width: 300px;
-  background: #4a48a9;
-  padding: 25px;
+.find-group {
+  position: absolute;
+  bottom: 0;
+  background: #253444;
+  color: #e4dfda;
+  font-weight: bold;
+  right: 0;
+  margin: auto;
+  border: 0;
+  padding: 10px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.find-group:hover {
+  cursor: pointer;
+  color: #253444;
+  background: #ffa500;
+}
+
+.latest-posts {
+  margin-bottom: 50px;
+}
+
+.latest-posts hr {
+  margin: 5px 0;
+  border: 0;
+  border-top: 2px solid #253444;
+}
+
+.latest-posts h3 {
+  color: #253444;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.latest-posts button {
+  border: 0;
+  background: #253444;
+  color: #e4dfda;
+  padding: 5px;
+}
+
+.latest-posts button:hover {
+  cursor: pointer;
+  background: #ffa500;
+  color: #253444;
+}
+
+.latest-posts {
+  color: #e4dfda;
+}
+
+.latest-posts .user {
+  font-size: 0.7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.small-game {
+  color: #ffa500;
 }
 
 footer {

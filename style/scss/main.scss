@@ -109,12 +109,12 @@ main {
 #game-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .game-box {
     display: flex;
-    width: 100%;
-    margin-bottom: $pagePadding;
+    margin-bottom: 50px;
 }
 
 .game-image {
@@ -156,12 +156,71 @@ main {
 .game-meta {
     width: 50%;
     line-height: $highline;
+    position: relative;
 }
 
-aside {
-    width: 300px;
-    background: $mainColor;
-    padding: $pagePadding;
+.find-group {
+    position: absolute;
+    bottom: 0;
+    background: $secColor;
+    color: $light;
+    font-weight: bold;
+    right: 0;
+    margin: auto;
+    border: 0;
+    padding: 10px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.find-group:hover {
+    cursor: pointer;
+    color: $secColor;
+    background: $orange;
+}
+
+.latest-posts {
+    margin-bottom: 50px;
+}
+
+.latest-posts hr {
+    margin: 5px 0;
+    border: 0;
+    border-top: 2px solid $secColor;
+}
+
+
+.latest-posts h3 {
+    color: $secColor;
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest-posts button {
+    border: 0;
+    background: $secColor;
+    color: $light;
+    padding: 5px;
+}
+
+.latest-posts button:hover {
+    cursor: pointer;
+    background: $orange;
+    color: $secColor;
+}
+
+.latest-posts {
+    color: $light;
+}
+
+.latest-posts .user {
+    font-size: 0.7em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-game {
+    color: $orange;
 }
 
 footer {
