@@ -1,5 +1,30 @@
-<?php $pageTitle='Welcome'; ?>
-<?php include('inc/head.php'); ?>
+
+<?php 
+    $pageTitle='Welcome';
+    include_once('inc/head.php');
+    include_once('config/Database.php');
+
+    if($user->isLoggedIn()!=''){
+        $user->redirect('index.php');
+    }
+
+    // LINK LOGIN FORM WITH VARIABLES
+    if(isset($_POST['submit'])){
+        $email = trim($_POST['email']);
+        $username = trim($_POST['username']);
+        $pass = trim($_POST['password']);
+        $firstname = trim($_POST['firstname']);
+        $lastname = trim($_POST['lastname']);
+        $age = $_POST['age'];
+        $address = trim($_POST['address']);
+        $city = trim($_POST['city']);
+        $region = trim($_POST['region']);
+
+        $user->register($email, $username, $pass, $firstname, $lastname, $age, $address, $city, $region);
+
+    }
+    ?>
+
     <!--Slider-->
         <div id="slider">
             <div class="loading"></div>
@@ -37,24 +62,24 @@
         <div class="content">
             <section>
             <h1>Sign up now</h1>
-                <form id="reg-form" action="">
+                <form id="reg-form" method="POST">
                     <div class="form-block">
-                    <input type="text" class="css-input" placeholder="E-Mail">
-                    <input type="text" class="css-input" placeholder="Username">
-                    <input type="password" class="css-input" placeholder="Password">
-                    <input type="password" class="css-input" placeholder="Repeat Password">
+                    <input type="text" class="css-input" placeholder="E-Mail" name="email">
+                    <input type="text" class="css-input" placeholder="Username" name="username">
+                    <input type="password" class="css-input" placeholder="Password" name="password">
+                    <input type="password" class="css-input" placeholder="Repeat Password" name="rePassword">
                     </div>
                     <div class="form-block">
-                    <input type="text" class="css-input" placeholder="First Name">
-                    <input type="text" class="css-input" placeholder="Last Name">
-                    <input type="text" class="css-input" placeholder="Age">
+                    <input type="text" class="css-input" placeholder="First Name" name="firstname">
+                    <input type="text" class="css-input" placeholder="Last Name" name="lastname">
+                    <input type="text" class="css-input" placeholder="Age" name="age">
                     </div>
                     <div class="form-block">
-                    <input type="text" class="css-input" placeholder="Address">
-                    <input type="text" class="css-input" placeholder="ZIP and City">
-                    <input type="text" class="css-input" placeholder="Region">
+                    <input type="text" class="css-input" placeholder="Address" name="address">
+                    <input type="text" class="css-input" placeholder="City" name="city">
+                    <input type="text" class="css-input" placeholder="Region" name="region">
                     </div>
-                    <input class="btn" type="submit" value="Submit">
+                    <input class="btn" type="submit" value="Submit" name="submit">
                 </form>
             </section>
         </div>
@@ -62,4 +87,6 @@
             Sidebar
         </aside> -->
     </main>
-<?php include('inc/footer.php'); ?>
+<?php 
+include_once('inc/footer.php'); 
+?>
