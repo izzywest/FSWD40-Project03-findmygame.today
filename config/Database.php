@@ -17,7 +17,8 @@
 			// SET PDO OPTIONS
 			$options = array(
 				PDO::ATTR_PERSISTENT => true,
-				PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+				PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+				PDO::ATTR_EMULATE_PREPARES => true
 			);
 
 			// CREATE PDO INSTANCE
@@ -39,17 +40,17 @@
 			try{
 				$pass = password_hash($pass, PASSWORD_DEFAULT);
 				// PASSWORD ENCRYPTION
-				$statement = $this->dbh->prepare('INSERT INTO user(U_Email, U_Username, U_Pass, U_Firstname, U_Lastname, U_Age, U_Address, U_City, U_Region ) VALUES ( :email, :username, :password,  :firstname, :lastname, :age, :address, :city, :region) ');
+				$statement = $this->dbh->prepare('INSERT INTO `user`(U_Email, U_Username, U_Pass, U_Firstname, U_Lastname, U_Age, U_Address, U_City, U_Region ) VALUES ( :email, :username, :password, :firstname, :lastname, :age, :address, :city, :region) ');
 				// BIND PLACEHOLDERS TO VARIABLES
-				$statement->bindparam(':email', $email);
-				$statement->bindparam(':username', $username);
-				$statement->bindparam(':password', $pass);
-				$statement->bindparam(':firstname', $firstname);
-				$statement->bindparam(':lastname', $lastname);
-				$statement->bindparam(':age', $age);
-				$statement->bindparam(':address', $address);
-				$statement->bindparam(':city', $city);
-				$statement->bindparam(':region', $region);
+				$statement->bindparam(':email', $email, PDO::PARAM_STR);
+				$statement->bindparam(':username', $username, PDO::PARAM_STR);
+				$statement->bindparam(':password', $pass, PDO::PARAM_STR);
+				$statement->bindparam(':firstname', $firstname, PDO::PARAM_STR);
+				$statement->bindparam(':lastname', $lastname, PDO::PARAM_STR);
+				$statement->bindparam(':age', $age, PDO::PARAM_INT);
+				$statement->bindparam(':address', $address, PDO::PARAM_STR);
+				$statement->bindparam(':city', $city, PDO::PARAM_STR);
+				$statement->bindparam(':region', $region, PDO::PARAM_STR);
 
 				$statement->execute();
 
@@ -65,9 +66,9 @@
 		// LOGIN
 		public function login($username, $pass){
 			try {
-				$statement = $this->dbh->prepare('SELECT * FROM `user` WHERE U_Username=:username, U_Pass=:password');
-				$statement->bindparam(':username', $username);
-				$statement->bindparam(':password', $pass);
+				$statement = $this->dbh->prepare("SELECT U_ID, U_Username, U_Pass FROM `user` WHERE U_Username = :username AND U_Pass=:password");
+				$statement->bindparam(':username', $username, PDO::PARAM_STR);
+				$statement->bindparam(':password', $pass, PDO::PARAM_STR);
 				$statement->execute();
 				$row = $statement->fetch(PDO::FETCH_ASSOC);
 

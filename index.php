@@ -1,6 +1,6 @@
 <?php 
+session_start();
     $pageTitle='Welcome'; 
-    include('inc/head.php');
     include_once('config/Database.php');
 
     $db = new Database();
@@ -19,6 +19,28 @@
 
         $db->register($email, $username, $pass, $firstname, $lastname, $age, $address, $city, $region);
     }
+
+    $error = array();
+    $response = array();
+    $success = '';
+
+    // VALIDATE
+    $db = new Database();
+
+if($db->isLoggedIn()!="")
+{
+ $db->redirect('index.php');
+}
+
+if(isset($_POST['btn-login']))
+{
+ $username = trim($_POST['username']);
+ $pass = trim($_POST['password']);
+ 
+ $db->login($username,$pass);
+ $db->redirect('./dashboard/index.php');
+}
+include('inc/head.php');
 ?>
     <!--Slider-->
         <div id="slider">
