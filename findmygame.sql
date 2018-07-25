@@ -351,7 +351,8 @@ CREATE TABLE `user` (
   `U_Avatar` varchar(255) DEFAULT NULL,
   `U_Rank` varchar(255) DEFAULT NULL,
   `U_Socials` varchar(255) DEFAULT NULL,
-  `U_Role` varchar(100) DEFAULT NULL
+  `U_Role` varchar(100) DEFAULT NULL, 
+  `U_Status` enum('Y', 'N')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
