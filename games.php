@@ -17,7 +17,6 @@
 		$show = $db->getResultSet();
 
         //Show latest posts
-        // SHOW USERS
 		$db->query('SELECT  `posts`.`PO_Headline`, 
                             `posts`.`FK_U_ID`,
                             `posts`.`PO_Description`,
@@ -72,7 +71,7 @@
                         <small><?php echo $post['PO_Description']; ?></small>
                         <hr>
                         <div class="user">
-                            <span>By: <?php echo $post['U_Username']; ?></span> <span class="small-game"><?php echo $post['GA_Name']; ?></span>
+                            <span><strong>By:</strong> <?php echo $post['U_Username']; ?></span> <span class="small-game"><?php echo $post['GA_Name']; ?></span>
                         </div>
                     </div>
                 <?php endforeach; ?>
