@@ -40,8 +40,15 @@ h1.pageTitle {
 }
 
 .content {
-    width: 100%;
+    width: 80%;
     padding-right: 25px;
+}
+
+aside {
+    width: 20%;
+    background: $mainColor;
+    padding: $pagePadding;
+    margin-bottom: auto;
 }
 
 section {
