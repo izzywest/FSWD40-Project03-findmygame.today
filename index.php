@@ -3,9 +3,6 @@
     <!--Slider-->
         <div id="slider">
             <div class="loading"></div>
-            <div class="arrow arrow-left">
-                <i class="fa fa-angle-left fa-2x"></i>
-            </div>
             <ul class="slides">
                 <li class="slide slide1">
                     <div>
@@ -32,9 +29,6 @@
                     </div>
                 </li>
             </ul>
-            <div class="arrow arrow-right">
-                <i class="fa fa-angle-right fa-2x"></i>
-            </div>
         </div>
 
     
@@ -47,6 +41,8 @@
                     <div class="form-block">
                     <input type="text" class="css-input" placeholder="E-Mail">
                     <input type="text" class="css-input" placeholder="Username">
+                    <input type="password" class="css-input" placeholder="Password">
+                    <input type="password" class="css-input" placeholder="Repeat Password">
                     </div>
                     <div class="form-block">
                     <input type="text" class="css-input" placeholder="First Name">
