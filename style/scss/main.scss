@@ -50,7 +50,7 @@ nav ul li a {
 }
 
 .svgback {
-    fill: $secColor;
+    fill: $mainColor;
 }
 
 .svgfront {
@@ -59,11 +59,16 @@ nav ul li a {
 
 nav ul li a:hover,
 .active {
-    color: $mainColor;
+    color: $secColor;
 }
 
 nav ul li a:hover .svgback,
 .active .svgback {
+    fill: $orange;
+}
+
+nav ul li a:hover .svgfront,
+.active .svgfront {
     fill: $mainColor;
 }
 
@@ -179,8 +184,33 @@ main {
     background: $orange;
 }
 
+
+/*POSTS*/
+#posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-boxes {
+    width: 49%;
+    position: relative;
+    padding-bottom: 70px !important;
+}
+
+.post-boxes .user {
+    position: absolute;
+    bottom: $pagePadding;
+    border-top: 2px solid $secColor;
+    left: $pagePadding;
+    right: $pagePadding;
+    padding-top: 5px;
+}
+
 .latest-posts {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    background: $mainColor;
+    padding: $pagePadding;
 }
 
 .latest-posts hr {
@@ -194,6 +224,8 @@ main {
     color: $secColor;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .latest-posts button {

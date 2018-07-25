@@ -34,7 +34,7 @@ input {
   padding: 5px;
   font-size: 16px;
   background-color: #e4dfda;
-  border-color: #253444;
+  border-color: #4a48a9;
   color: #040403;
   /* box-shadow: 0px 0px 5px 0px rgba(50, 58, 66, .75); */
   font-family: monospace;
@@ -165,7 +165,7 @@ label {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #253444;
+  background-color: #4a48a9;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -186,7 +186,7 @@ label {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid #4a48a9;
+  border: solid #253444;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -219,7 +219,7 @@ label {
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkradio {
-  background-color: #253444;
+  background-color: #4a48a9;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -242,7 +242,7 @@ label {
   height: 8px;
   border-radius: 50%;
   background: white;
-  background-color: #4a48a9;
+  background-color: #253444;
 }
 
 /* button style */
@@ -266,13 +266,13 @@ label {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   color: #e4dfda;
-  background-color: #253444;
+  background-color: #4a48a9;
   border-color: #323a42;
 }
 
 .btn:hover {
   color: #e4dfda;
-  background-color: #4a48a9;
+  background-color: #253444;
   border-color: #323a42;
   cursor: pointer;
 }
@@ -280,14 +280,14 @@ label {
 .btn:focus {
   color: #fff;
   background-color: #323a42;
-  border-color: #253444;
+  border-color: #4a48a9;
 }
 
 .btn:not(:disabled):not(.disabled):active,
 .btn:not(:disabled):not(.disabled).active,
 .show > .btn.dropdown-toggle {
   color: #fff;
-  background-color: #253444;
+  background-color: #4a48a9;
   border-color: #323a42;
 }
 
@@ -332,7 +332,11 @@ h1 {
 h1.pageTitle {
   font-size: 2.5em;
   text-transform: uppercase;
-  color: #253444;
+  color: #4a48a9;
+}
+
+strong {
+  color: #ffa500;
 }
 
 .content {
@@ -342,7 +346,7 @@ h1.pageTitle {
 
 aside {
   width: 20%;
-  background: #4a48a9;
+  background: #253444;
   padding: 25px;
   margin-bottom: auto;
 }
@@ -385,7 +389,7 @@ section {
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  border-bottom: 5px solid #4a48a9;
+  border-bottom: 5px solid #253444;
 }
 
 #slider .slides {
@@ -503,7 +507,7 @@ header {
   width: 100vw;
   z-index: 2;
   background: #fff;
-  border-bottom: 5px solid #4a48a9;
+  border-bottom: 5px solid #253444;
 }
 
 nav {
@@ -538,7 +542,7 @@ nav ul li a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  color: #253444;
+  color: #4a48a9;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -562,7 +566,12 @@ nav ul li a:hover,
 
 nav ul li a:hover .svgback,
 .active .svgback {
-  fill: #4a48a9;
+  fill: #ffa500;
+}
+
+nav ul li a:hover .svgfront,
+.active .svgfront {
+  fill: #253444;
 }
 
 #logo img {
@@ -636,7 +645,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #4a48a9;
+  background: #253444;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -655,7 +664,7 @@ main {
 }
 
 .game-genre {
-  background: #253444;
+  background: #4a48a9;
   padding: 2px;
   padding-left: 5px;
   margin-top: 5px;
@@ -674,7 +683,7 @@ main {
 .find-group {
   position: absolute;
   bottom: 0;
-  background: #253444;
+  background: #4a48a9;
   color: #e4dfda;
   font-weight: bold;
   right: 0;
@@ -687,33 +696,66 @@ main {
 
 .find-group:hover {
   cursor: pointer;
-  color: #253444;
+  color: #4a48a9;
   background: #ffa500;
 }
 
+/*POSTS*/
+#posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post-boxes {
+  width: 49%;
+  position: relative;
+  padding-bottom: 70px !important;
+}
+
+.post-boxes .user {
+  position: absolute;
+  bottom: 25px;
+  border-top: 2px solid #4a48a9;
+  left: 25px;
+  right: 25px;
+  padding-top: 5px;
+}
+
 .latest-posts {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  background: #253444;
+  padding: 25px;
 }
 
 .latest-posts hr {
   margin: 5px 0;
   border: 0;
-  border-top: 2px solid #253444;
+  border-top: 2px solid #4a48a9;
 }
 
 .latest-posts h3 {
-  color: #253444;
+  color: #4a48a9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
 }
 
 .latest-posts button {
   border: 0;
-  background: #253444;
+  background: #4a48a9;
   color: #e4dfda;
   padding: 5px;
 }
@@ -721,7 +763,7 @@ main {
 .latest-posts button:hover {
   cursor: pointer;
   background: #ffa500;
-  color: #253444;
+  color: #4a48a9;
 }
 
 .latest-posts {
@@ -744,8 +786,8 @@ main {
 
 footer {
   padding: 25px;
-  border-top: 5px solid #4a48a9;
-  background: #253444;
+  border-top: 5px solid #253444;
+  background: #4a48a9;
   color: #e4dfda;
 }
 /*# sourceMappingURL=main.css.map */

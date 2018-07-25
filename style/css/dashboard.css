@@ -34,7 +34,7 @@ input {
   padding: 5px;
   font-size: 16px;
   background-color: #e4dfda;
-  border-color: #253444;
+  border-color: #4a48a9;
   color: #040403;
   /* box-shadow: 0px 0px 5px 0px rgba(50, 58, 66, .75); */
   font-family: monospace;
@@ -165,7 +165,7 @@ label {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #253444;
+  background-color: #4a48a9;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -186,7 +186,7 @@ label {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid #4a48a9;
+  border: solid #253444;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -219,7 +219,7 @@ label {
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkradio {
-  background-color: #253444;
+  background-color: #4a48a9;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -242,7 +242,7 @@ label {
   height: 8px;
   border-radius: 50%;
   background: white;
-  background-color: #4a48a9;
+  background-color: #253444;
 }
 
 /* button style */
@@ -266,13 +266,13 @@ label {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   color: #e4dfda;
-  background-color: #253444;
+  background-color: #4a48a9;
   border-color: #323a42;
 }
 
 .btn:hover {
   color: #e4dfda;
-  background-color: #4a48a9;
+  background-color: #253444;
   border-color: #323a42;
   cursor: pointer;
 }
@@ -280,14 +280,14 @@ label {
 .btn:focus {
   color: #fff;
   background-color: #323a42;
-  border-color: #253444;
+  border-color: #4a48a9;
 }
 
 .btn:not(:disabled):not(.disabled):active,
 .btn:not(:disabled):not(.disabled).active,
 .show > .btn.dropdown-toggle {
   color: #fff;
-  background-color: #253444;
+  background-color: #4a48a9;
   border-color: #323a42;
 }
 
@@ -332,7 +332,11 @@ h1 {
 h1.pageTitle {
   font-size: 2.5em;
   text-transform: uppercase;
-  color: #253444;
+  color: #4a48a9;
+}
+
+strong {
+  color: #ffa500;
 }
 
 .content {
@@ -342,7 +346,7 @@ h1.pageTitle {
 
 aside {
   width: 20%;
-  background: #4a48a9;
+  background: #253444;
   padding: 25px;
   margin-bottom: auto;
 }
@@ -393,7 +397,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #253444;
+  background: #4a48a9;
   color: #e4dfda;
   border-bottom: 2px solid #040403;
 }
@@ -411,7 +415,7 @@ header {
 .username {
   padding: 25px;
   font-family: "Hammersmith One", sans-serif;
-  color: #4a48a9;
+  color: #253444;
 }
 
 .logout {
@@ -434,7 +438,7 @@ main {
 ----------*/
 aside {
   width: 250px;
-  background: #253444;
+  background: #4a48a9;
   border-right: 2px solid #040403;
 }
 
@@ -447,7 +451,7 @@ aside {
 
 .dash-nav li a {
   border-bottom: 2px solid #040403;
-  background: #253444;
+  background: #4a48a9;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -463,8 +467,8 @@ aside {
 }
 
 .dash-nav li a:hover, .active {
-  background: #4a48a9;
-  color: #253444;
+  background: #253444;
+  color: #4a48a9;
 }
 
 .active {
@@ -478,12 +482,12 @@ aside {
 .dash-sub-nav li a {
   background: #e4dfda;
   height: 40px;
-  color: #4a48a9;
+  color: #253444;
 }
 
 a.backlink {
-  background: #4a48a9 !important;
-  color: #253444 !important;
+  background: #253444 !important;
+  color: #4a48a9 !important;
 }
 
 /* Content */
@@ -504,7 +508,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #4a48a9;
+  background: #253444;
 }
 
 .status-bar {
