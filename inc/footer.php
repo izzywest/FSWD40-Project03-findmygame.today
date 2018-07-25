@@ -7,49 +7,74 @@ footer {
 .footer-img {
     width: 3.5rem;
 }
-.grid-container {
+.socialbar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
   align-items: center;
-  justify-items: center; 
+  /* justify-items: center;  */
 }
 
-.grid-item {
+.social-item {
 justify-self: center;
 }
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  align-items: center;
+}
+
+.info-item {
+justify-self: center;
+}
+
+
 </style>    
 
     <!--Footer-->
     <footer>
-        <div class="grid-container">
-            <div class="grid-item footer-img">
-            </div>
-            <div class="grid-item footer-img">
-            <?php echo file_get_contents("img/icons/social/discord.svg"); ?>
-            </div>
-            <div class="grid-item footer-img">
-            <?php echo file_get_contents("img/icons/social/reddit.svg"); ?>
-            </div>
-            <div class="grid-item footer-img">
-            <?php echo file_get_contents("img/icons/social/steam.svg"); ?>
-            </div>
-            <div class="grid-item footer-img">
-            <?php echo file_get_contents("img/icons/social/telegram.svg"); ?>
-            </div>
-            <div class="grid-item footer-img">
-            <?php echo file_get_contents("img/icons/social/twitch.svg"); ?>
-            </div>
-            <div class="grid-item footer-img">
-            <?php echo file_get_contents("img/icons/social/youtube.svg"); ?>
-            </div>
-            <div class="grid-item footer-img">
-            <?php echo file_get_contents("img/icons/social/deviantart.svg"); ?>
-            </div>       
-            <div class="grid-item footer-img">
-            </div>     
+        <div class="socialbar">
+                <div class="social-item footer-img">
+                </div>
+                <div class="social-item footer-img">
+                <?php echo file_get_contents("img/icons/social/discord.svg"); ?>
+                </div>
+                <div class="social-item footer-img">
+                <?php echo file_get_contents("img/icons/social/reddit.svg"); ?>
+                </div>
+                <div class="social-item footer-img">
+                <?php echo file_get_contents("img/icons/social/steam.svg"); ?>
+                </div>
+                <div class="social-item footer-img">
+                <?php echo file_get_contents("img/icons/social/telegram.svg"); ?>
+                </div>
+                <div class="social-item footer-img">
+                <?php echo file_get_contents("img/icons/social/twitch.svg"); ?>
+                </div>
+                <div class="social-item footer-img">
+                <?php echo file_get_contents("img/icons/social/youtube.svg"); ?>
+                </div>
+                <div class="social-item footer-img">
+                <?php echo file_get_contents("img/icons/social/deviantart.svg"); ?>
+                </div>       
+                <div class="social-item footer-img">
+                </div>     
         </div>
+        <div class="info-container">
+            <div class="info-item">
+                <p><b>Address:</b><br> Gamerstreet 20,<br> 23932 San Andreas</p>
+            </div>
+            <div class="info-item">
+                <p><b>Address:</b><br> Gamerstreet 20,<br> 23932 San Andreas</p>
+            </div>
+            <div class="info-item">
+                <p><b>Address:</b><br> Gamerstreet 20,<br> 23932 San Andreas</p>
+            </div>
+        </div>
+</div>
 
-        <!-- <h1>Test</h1> -->
     </footer>
 
     <!--Scripts-->
