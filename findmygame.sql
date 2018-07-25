@@ -63,6 +63,51 @@ INSERT INTO `ban` (`B_ID`, `B_Status`, `B_Duration`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `event`
+--
+
+CREATE TABLE `event` (
+  `EV_ID` int(11) NOT NULL,
+  `FK_U_ID` int(11) DEFAULT NULL,
+  `FK_GA_ID` int(11) DEFAULT NULL,
+  `EV_PO_DateTime` datetime DEFAULT NULL,
+  `EV_ST_DateTime` datetime DEFAULT NULL,
+  `EV_END_DateTime` datetime DEFAULT NULL,
+  `EV_Name` varchar(200) DEFAULT NULL,
+  `EV_Location` varchar(100) DEFAULT NULL,
+  `EV_Description` varchar(255) DEFAULT NULL,
+  `EV_Capacity` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `event`
+--
+
+INSERT INTO `event` (`EV_ID`, `FK_U_ID`, `FK_GA_ID`, `EV_PO_DateTime`, `EV_ST_DateTime`, `EV_END_DateTime`, `EV_Name`, `EV_Location`, `EV_Description`, `EV_Capacity`) VALUES
+(1, 1, 3, '2017-03-29', '2018-08-01 12:00:00', '2018-08-02 04:00:00', 'Casual Connect', 'Vienna', 'Casual Connect brings together every year over 100 gaming professionals from all over the world to connect and learn from each other. This event is a great networking opportunity for professionals in the industry.', 100),
+(2, 8, 4,  '2016-07-18', '2018-09-01 16:00:00', '2018-09-02 18:00:00', 'The PC Gamer Weekender', 'Prague', 'An entire weekend dedicated to PC video games. Fancy playing Hearthstone with a few mates? How about Overwatch? Or Dawn of War III? Then this is the place for you. There will also be talks, workshops, and board games among other activities.', 200),
+(3, 4, 8, '2017-10-19', '2018-10-10 08:00:00', '2018-10-10 23:59:59', 'Insomnia', 'Paris', 'Easily the most famous, Insomnia is also one of the oldest French gaming events. It is a big festival about everything gaming including big exhibition halls, interactive activities and eSports tournaments, among others. They hold three editions a year in spring, summer and winter.', 500),
+(4, 2, 10, '2016-06-21', '2018-11-23 15:00:00', '2018-11-23 22:00:00', 'Berlin Games Festival', 'Berlin', 'The Berlin Games Festival is a series of events from talks going through financial advice to the German Academy Game Awards. It’s a 10-day celebration of everything gaming that’s got the ultimate goal of turning the British city into the gaming capital of the world.', 500),
+(5, 7, 5, '2018-04-13', '2018-08-22 08:00:00', '2018-08-24 18:00:00', 'GEEK - Meet Make Play', 'London', ' GEEK is a festival that even though it features next-gen titles, is focused on retro gaming. The expo is known for showcasing a great variety of playable consoles, old and new.', 200),
+(6, 3, 5, '2015-07-10', '2018-09-10 12:00:00', '2018-09-11 18:00:00', 'Retro Games Fair', 'Vienna', 'Fan of retro games? Then this is your opportunity to get your hands on your favourite title from back in the day. Retro Games Fair will feature more than 60 sellers in over 130 tables of goodies.', 400),
+(7, 2, 2, '2016-01-02', '2018-08-15 12:00:00', '2018-08-18 18:00:00', 'Develop: Prague', 'Prague', 'A two-day conference that covers every aspect of the game development process from the idea, going through design and funding to production. Develop: Prague is a great opportunity for smaller studios to make themselves known and learn from their peers.', 300),
+(8, 7, 11, '2017-04-18', '2018-09-07 15:00:00', '2018-09-09 20:00:00', 'Animex', 'New York', 'Animex is a mix of workshops, talks, presentations and other activities related to everything animation and computer games. An event for those who want to find out about the latest in the industry.', 300),
+(9, 9, 19, '2018-07-01', '2018-10-31 18:00:00', '2018-11-01 18:00:00', 'Halloween Special', 'Berlin', 'Halloween Special is a nonstop four-day event with DOTA 2, CSGO, SC2, and Rocket League tournaments. Perfect for eSports fans, the venue provides with 24h refreshments and entertainment.', 45),
+(10, 8, 24, '2016-03-03', '2018-12-07 18:00:00', '2018-12-07 23:00:00', 'Release Super Smash Bros Ultimate', 'Vienna', 'Lets get together and celebrate the release of Super Smash Bros Ultimate!', 50),
+(11, 4, 17, '2016-06-13', '2018-11-02 10:00:00', '2018-11-02 20:00:00', 'King of the East', 'St. Petersburg', ' King of the East is Russias largest student-run gaming gathering. The two-day occasion offers Overwatch, League of Legends, CS:GO tournaments on top of giveaways and other activities. ', 150),
+(12, 5, 7, '2016-05-25', '2018-11-09 17:00:00', '2018-11-09 22:00:00', 'MCV Awards', 'Auckland', 'Unlike other gaming awards, the MCV recognise all areas of the gaming industry including publishing, retail, distribution, marketing, PR, events and media.', 200),
+(13, 2, 8, '2017-07-18', '2018-12-12 18:00:00', '2018-12-12 23:59:59', 'EGX Rezzed', 'London', 'Self-described as London’s biggest gaming event, EGX Rezzed features talks with famous game designers, previews of upcoming PC and console titles and many other gaming related activities.', 1000),
+(14, 1, 13, '2016-06-18', '2018-12-31 18:00:00', '2019-01-01 18:00:00', 'Happy New Year', 'Ashgabat', 'The NYE Festival describes itself as a “free, family-friendly celebration of video games”. Here’s a chance to meet local developers and learn how video games are made while you have fun.', 30),
+(15, 4, 23, '2017-02-12', '2018-12-24 12:00:00', '2018-12-26 18:00:00', 'Merry Christmas', 'Paris', 'Loved playing Streetfighter II on the SNES? Or how about the first Mario Kart? If you’re a fan of first and second generation video games then NERG this is the event for you. A weekend where you’ll get to play the best games from the past and spend time with like-minded people.', 20),
+(16, 6, 2, '2015-11-20', '2018-12-01 18:00:00', '2018-12-01 18:00:00', 'LAN Party', 'Auckland', 'Casual get-together', 15),
+(17, 9, 8, '2016-01-11', '2019-05-20 12:00:00', '2019-05-22 18:00:00', 'We are Developers Meetup', 'Vienna', 'Our mission is to connect developers globally. WeAreDevelopers was founded in order to enable developers across the world to share their knowledge.', 100),
+(18, 7, 11, '2017-08-30', '2018-08-24 12:00:00', '2018-08-24 16:00:00', 'Community Meetup at GAMESCON', 'Cologne', 'To finally get to know each other in RL, lets all meet at 12:00 in front of the venue.', 50),
+(19, 2, 14, '2016-12-03', '2019-04-01 12:00:00', '2019-04-02 18:00:00', 'German Dev Days Meetup', 'FFM', 'Place to go to meet fellow developers and connect with those who made it!', 1000),
+(20, 1, 15, '2018-02-26', '2018-12-01 18:00:00', '2018-12-01 18:00:00', 'LAN Party', 'Vienna', 'Casual monthly get-together! New-joiners welcome!', 20);
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `game`
 --
 
