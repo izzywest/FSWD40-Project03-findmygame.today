@@ -1,3 +1,4 @@
+<?php $pageTitle='Games'; ?>
 <?php include('inc/head.php'); ?>
 <?php include('config/Database.php'); ?>
 <?php 
@@ -22,7 +23,10 @@
                 <div class="game-box">
                     <div class="game-image">
                         <img src="<?php echo $game['GA_Image']; ?>" alt="<?php echo $game['GA_Name']; ?>">
-                        <div class="game-platform"><strong>Platforms:</strong> <?php echo $game['GA_Platform']; ?></div>
+                        <div class="game-info">
+                            <div class="game-platform"><strong>Platforms:</strong> <?php echo $game['GA_Platform']; ?></div>
+                            <div class="game-genre"><?php echo $game['GA_Genre']; ?></div>
+                        </div>
                     </div>
                     <div class="game-meta">
                         <h1><?php echo $game['GA_Name']; ?></h1>

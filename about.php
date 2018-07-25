@@ -1,9 +1,9 @@
+<?php $pageTitle='About'; ?>
 <?php include('inc/head.php'); ?>
    <div id="about" class="background-image"></div> 
     <!--Content-->
     <main class="top-margin">
         <div class="content">
-            <h1>About</h1>
             
             <!--Modal TRIGGERS-->
             <!--Trigger ONE -->

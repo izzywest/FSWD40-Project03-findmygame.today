@@ -1,3 +1,4 @@
+<?php $pageTitle='Groups'; ?>
 <?php include('inc/head.php'); ?>
    <div id="about" class="background-image"></div> 
     <!--Content-->
