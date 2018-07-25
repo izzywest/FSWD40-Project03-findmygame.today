@@ -306,7 +306,12 @@ label {
 }
 
 body {
-  font-family: "News Cycle";
+  font-family: "Lato", sans-serif;
+  font-size: 1.1em;
+}
+
+main {
+  letter-spacing: 2px;
 }
 
 /*text*/
@@ -322,6 +327,12 @@ h1 {
   font-size: 2em;
   text-transform: uppercase;
   color: #ffa500;
+}
+
+h1.pageTitle {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: #253444;
 }
 
 .content {
@@ -516,6 +527,7 @@ header {
 
 nav {
   height: 100%;
+  margin-top: 7px;
 }
 
 nav ul {
@@ -562,11 +574,13 @@ nav ul li a {
   fill: #e4dfda;
 }
 
-nav ul li a:hover, .active {
+nav ul li a:hover,
+.active {
   color: #4a48a9;
 }
 
-nav ul li a:hover .svgback, .active .svgback {
+nav ul li a:hover .svgback,
+.active .svgback {
   fill: #4a48a9;
 }
 
@@ -631,16 +645,36 @@ main {
   margin-right: 25px;
 }
 
-.game-platform {
+.game-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #4a48a9;
-  margin-top: -7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -10px;
   color: #e4dfda;
-  padding: 5px;
   font-weight: bold;
+  padding: 10px;
+}
+
+.game-platform {
+  margin-top: 5px;
 }
 
 .game-platform strong {
   color: #ffa500;
+}
+
+.game-genre {
+  background: #253444;
+  padding: 2px;
+  padding-left: 5px;
+  margin-top: 5px;
 }
 
 .game-image img {
@@ -649,6 +683,7 @@ main {
 
 .game-meta {
   width: 50%;
+  line-height: 35px;
 }
 
 aside {

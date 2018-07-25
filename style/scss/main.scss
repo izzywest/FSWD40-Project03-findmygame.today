@@ -1,12 +1,12 @@
 @import "general";
 @import "slider";
 @import "modal";
-
 /*Main Layout*/
+
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
@@ -23,6 +23,7 @@ header {
 
 nav {
     height: 100%;
+    margin-top: 7px;
 }
 
 nav ul {
@@ -31,7 +32,7 @@ nav ul {
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     height: 100%;
     width: 40px;
     margin: 0 $pagePadding;
@@ -51,15 +52,18 @@ nav ul li a{
 .svgback {
     fill: $secColor;
 }
+
 .svgfront {
     fill: $light;
 }
 
-nav ul li a:hover, .active {
+nav ul li a:hover,
+.active {
     color: $mainColor;
 }
 
-nav ul li a:hover .svgback, .active .svgback {
+nav ul li a:hover .svgback,
+.active .svgback {
     fill: $mainColor;
 }
 
@@ -68,36 +72,40 @@ nav ul li a:hover .svgback, .active .svgback {
 }
 
 main {
-  flex: 1;
-  padding: $pagePadding;
-  display: flex;
-  justify-content: space-between;
+    flex: 1;
+    padding: $pagePadding;
+    display: flex;
+    justify-content: space-between;
 }
 
 .background-image {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-
-  -webkit-filter: blur(5px) opacity(25%);;
-  -moz-filter: blur(5px) opacity(25%);;
-  -o-filter: blur(5px) opacity(25%);;
-  -ms-filter: blur(5px) opacity(25%);;
-  filter: blur(5px) opacity(25%);;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    -webkit-filter: blur(5px) opacity(25%);
+    ;
+    -moz-filter: blur(5px) opacity(25%);
+    ;
+    -o-filter: blur(5px) opacity(25%);
+    ;
+    -ms-filter: blur(5px) opacity(25%);
+    ;
+    filter: blur(5px) opacity(25%);
+    ;
 }
 
 #about {
     background-image: url('https://slotopaint.com/wp-content/uploads/2016/05/Legendlore_slide_06.jpg');
 }
 
-
 /*GAMES
 -------*/
+
 #game-container {
     display: flex;
     flex-wrap: wrap;
@@ -115,16 +123,30 @@ main {
     margin-right: $pagePadding;
 }
 
-.game-platform {
+.game-info {
+    display: flex;
+    justify-content: space-between;
     background: $mainColor;
-    margin-top: -7px;
+    align-items: center;
+    margin-top: -10px;
     color: $light;
-    padding: 5px;
     font-weight: bold;
+    padding: 10px;
+}
+
+.game-platform {
+    margin-top: 5px;
 }
 
 .game-platform strong {
     color: $orange;
+}
+
+.game-genre {
+    background: $secColor;
+    padding: 2px;
+    padding-left: 5px;
+    margin-top: 5px;
 }
 
 .game-image img {
@@ -133,8 +155,8 @@ main {
 
 .game-meta {
     width: 50%;
+    line-height: $highline;
 }
-
 
 aside {
     width: 300px;
