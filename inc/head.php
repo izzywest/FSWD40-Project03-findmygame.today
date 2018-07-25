@@ -19,9 +19,9 @@
 <body>
 
     <header>
-        <div id="logo">
+        <a href="index.php" id="logo">
             <img src="img/logo.png" alt="logo">
-        </div>
+        </a>
         <h1 class="pageTitle"><?php echo $pageTitle; ?></h1>
         <nav>
             <ul>
