@@ -385,7 +385,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500vw;
+  width: 400vw;
   height: 75vh;
   margin: 0;
   padding: 0;
@@ -418,32 +418,6 @@ section {
   color: #e4dfda;
   font-size: 130%;
   font-weight: bold;
-}
-
-.arrow {
-  height: 480px;
-  width: 50px;
-  background: rgba(0, 0, 0, 0);
-  z-index: 99;
-  line-height: 480px;
-  text-align: center;
-  color: #fff;
-}
-
-.arrow:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.arrow-left {
-  top: 0;
-  left: 0;
-  position: absolute;
-}
-
-.arrow-right {
-  top: 0;
-  right: 0;
-  position: absolute;
 }
 
 .loading {
