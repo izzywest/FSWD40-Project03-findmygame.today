@@ -1,3 +1,4 @@
+<?php $pageTitle='Welcome'; ?>
 <?php include('inc/head.php'); ?>
     <!--Slider-->
         <div id="slider">
