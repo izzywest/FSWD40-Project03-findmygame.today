@@ -35,13 +35,15 @@
                         <h3><?php echo $post['PO_Headline'] ?><button>contact</button></h3>
                         <small><?php echo $post['PO_Description']; ?></small>
                         <div class="user">
-                            <span><strong>By:</strong> <?php echo $post['U_Username']; ?> <strong>@</strong><?php echo $post['PO_DateTime']; ?></span> <strong class="small-game"><?php echo $post['GA_Name']; ?></strong>
+                            <span><strong>By:</strong> <?php echo $post['U_Username']; ?> <strong>@</strong><?php echo $post['PO_DateTime']; ?></span> <strong class="small-game"><a href="games.php#<?php echo $post['GA_Name']; ?>"><?php echo $post['GA_Name']; ?></a></strong>
                         </div>
                     </div>
                 <?php endforeach; ?>
         </div>
         <aside>
-            Display w/e data here
+            <h1>Filter</h1>
+           <div class="search"><img src="img/icons/glass.png" width="50px" height="50px" alt=""> <input class="css-input" type="text" placeholder="Search"></div>
+            <strong>select by game </strong>
         </aside> 
     </main>
 <?php include('inc/footer.php'); ?>
