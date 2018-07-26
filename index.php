@@ -67,7 +67,7 @@ include('inc/head.php');
     
     <!--Content-->
     <main>
-        <div class="content">
+        <div id="main-container" class="content">
             <?php if(empty($_SESSION['user_id'])){ ?>
             <section>
             <h1>Sign up now</h1>
@@ -92,6 +92,10 @@ include('inc/head.php');
                 </form>
             </section>
             <?php } ?>
+
+            <section id="app">
+                <img src="img/app.jpeg" alt="">
+            </section>
         </div>
         <!-- <aside>
             Sidebar

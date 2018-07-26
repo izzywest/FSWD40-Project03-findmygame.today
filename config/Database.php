@@ -2,7 +2,7 @@
 
 	class Database {
 		private $host = 'localhost';
-		private $user = 'root';
+		private $user = 'cf';
 		private $pass = '';
 		private $dbname = 'findmygame';
 

@@ -820,6 +820,14 @@ main {
   color: #ffa500;
 }
 
+#app img {
+  width: 100%;
+}
+
+#main-container {
+  width: 100%;
+}
+
 footer {
   padding: 25px;
   border-top: 5px solid #253444;
