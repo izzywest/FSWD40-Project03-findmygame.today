@@ -53,7 +53,7 @@
                             <div class="game-platform"><strong>Genre:</strong> <?php echo $game['GA_Genre']; ?></div>
                         </div>
                     </div>
-                    <div class="game-meta">
+                    <div class="game-meta" id="<?php echo $game['GA_Name']; ?>">
                         <h1><?php echo $game['GA_Name']; ?></h1>
                         <?php echo $game['GA_Description']; ?>
                         <button class="find-group">Find group</button>
