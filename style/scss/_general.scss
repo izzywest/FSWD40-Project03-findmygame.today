@@ -21,6 +21,12 @@ main {
 /*text*/
 a {
     text-decoration: none;
+    color: $orange;
+}
+
+.content a::before {
+    content: '🔗';
+    font-size: 0.8em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,6 +48,7 @@ h1.pageTitle {
 strong {
     color: $orange;
 }
+
 
 .content {
     width: 80%;
