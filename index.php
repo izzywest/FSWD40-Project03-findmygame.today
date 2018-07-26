@@ -16,30 +16,40 @@ session_start();
         $address = trim($_POST['address']);
         $city = trim($_POST['city']);
         $region = trim($_POST['region']);
+        $role = 'user';
 
-        $db->register($email, $username, $pass, $firstname, $lastname, $age, $address, $city, $region);
+        $db->register($email, $username, $pass, $firstname, $lastname, $age, $address, $city, $region, $role);
+        $_SESSION['registerSuccess']  = "You registered successfully!";
     }
 
-    $error = array();
-    $response = array();
-    $success = '';
+    // LOGIN
 
-    // VALIDATE
-    $db = new Database();
+    if(isset($_POST['btn-login']))
+    {
+     $username = trim($_POST['username']);
+     $pass = trim($_POST['password']);
+     
+     $db->login($username,$pass);
+     $_SESSION['userID'] = $db->getUserById($id);
+     $_SESSION['U_Role'] = $db->getUserRole($userRole);
+     $_SESSION['loginSuccess']  = "Logged in Successfully!";
+     if($_SESSION['U_Role'] == 'admin')
+        $db->redirect('./dashboard/posts.php');
+    } 
 
-if($db->isLoggedIn()!="")
-{
- $db->redirect('index.php');
-}
+    if ($_SESSION['U_Role'] == 'user'){
+        $db->redirect('./dashboard/index.php');
+    }
 
-if(isset($_POST['btn-login']))
-{
- $username = trim($_POST['username']);
- $pass = trim($_POST['password']);
- 
- $db->login($username,$pass);
- $db->redirect('./dashboard/index.php');
-}
+    // LOGOUT
+    if(isset($_POST['btn-logout'])){
+        if($db->isLoggedIn()!="")
+        {
+         $db->logout();
+         $_SESSION['success']  = "You logged yourself out!";
+         $db->redirect('index.php');
+        }
+    }
 include('inc/head.php');
 ?>
     <!--Slider-->

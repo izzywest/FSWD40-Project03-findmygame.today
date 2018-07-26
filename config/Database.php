@@ -36,11 +36,11 @@
 		}
 
 		// REGISTER
-		public function register($email,$username, $pass, $firstname, $lastname, $age, $address, $city, $region){
+		public function register($email,$username, $pass, $firstname, $lastname, $age, $address, $city, $region, $role){
 			try{
 				$pass = password_hash($pass, PASSWORD_DEFAULT);
 				// PASSWORD ENCRYPTION
-				$statement = $this->dbh->prepare('INSERT INTO `user`(U_Email, U_Username, U_Pass, U_Firstname, U_Lastname, U_Age, U_Address, U_City, U_Region ) VALUES ( :email, :username, :password, :firstname, :lastname, :age, :address, :city, :region) ');
+				$statement = $this->dbh->prepare('INSERT INTO `user`(U_Email, U_Username, U_Pass, U_Firstname, U_Lastname, U_Age, U_Address, U_City, U_Region, U_Role ) VALUES ( :email, :username, :password, :firstname, :lastname, :age, :address, :city, :region, :role) ');
 				// BIND PLACEHOLDERS TO VARIABLES
 				$statement->bindparam(':email', $email, PDO::PARAM_STR);
 				$statement->bindparam(':username', $username, PDO::PARAM_STR);
@@ -51,6 +51,7 @@
 				$statement->bindparam(':address', $address, PDO::PARAM_STR);
 				$statement->bindparam(':city', $city, PDO::PARAM_STR);
 				$statement->bindparam(':region', $region, PDO::PARAM_STR);
+				$statement->bindparam(':role', $role, PDO::PARAM_STR);
 
 				$statement->execute();
 
@@ -66,7 +67,7 @@
 		// LOGIN
 		public function login($username, $pass){
 			try {
-				$statement = $this->dbh->prepare("SELECT U_ID, U_Username, U_Pass FROM `user` WHERE U_Username = :username AND U_Pass=:password");
+				$statement = $this->dbh->prepare("SELECT * FROM `user` WHERE U_Username = :username AND U_Pass=:password");
 				$statement->bindparam(':username', $username, PDO::PARAM_STR);
 				$statement->bindparam(':password', $pass, PDO::PARAM_STR);
 				$statement->execute();
@@ -93,6 +94,22 @@
 		public function logout(){
 			session_destroy();
 			$_SESSION['U_Session'] = false;
+		}
+
+		public function getUserById($id){
+			$statement = $this->dbh->prepare("SELECT U_ID FROM `user` WHERE U_ID=:userId");
+			$statement->bindparam(':userId', $id, PDO::PARAM_INT);
+			$statement->execute();
+			$row = $statement->fetch(PDO::FETCH_ASSOC);
+		}
+
+		public function getUserRole($userRole){
+			$statement = $this->dbh->prepare("SELECT U_Role FROM `user` WHERE u_Role=:userRole");
+			$statement->bindparam(':userRole', $userRole, PDO::PARAM_INT);
+			$statement->execute();
+			$row = $statement->fetch(PDO::FETCH_ASSOC);
+
+			return $row;
 		}
 
 		// BIND VALUES
