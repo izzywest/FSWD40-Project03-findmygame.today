@@ -447,6 +447,7 @@ aside {
   width: 250px;
   background: #4a48a9;
   border-right: 2px solid #040403;
+  margin-bottom: 0;
 }
 
 /* Dash Menu */

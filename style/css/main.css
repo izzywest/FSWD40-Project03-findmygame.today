@@ -812,6 +812,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 25px;
 }
 
 .small-game {

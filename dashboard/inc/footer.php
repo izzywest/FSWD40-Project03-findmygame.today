@@ -1,7 +1,7 @@
     </main>
     <footer>
         <ul class="status-bar">
-            <li>Logged in as: $role</li>
+            <li>Logged in as: <?php echo $_SESSION['role']; ?></li>
             <li>Rank: $rank</li>
             <li>Posts: <a href="posts.php">$int</a></li>
             <li>Favorite Games: $int</li>

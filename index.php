@@ -1,5 +1,4 @@
 <?php 
-session_start();
     $pageTitle='Welcome'; 
     include_once('config/Database.php');
 
@@ -22,24 +21,6 @@ session_start();
         $_SESSION['registerSuccess']  = "You registered successfully!";
     }
 
-    // LOGIN
-
-    if(isset($_POST['btn-login']))
-    {
-     $username = trim($_POST['username']);
-     $pass = trim($_POST['password']);
-     
-     $db->login($username,$pass);
-     $_SESSION['userID'] = $db->getUserById($id);
-     $_SESSION['U_Role'] = $db->getUserRole($userRole);
-     $_SESSION['loginSuccess']  = "Logged in Successfully!";
-     if($_SESSION['U_Role'] == 'admin')
-        $db->redirect('./dashboard/posts.php');
-    } 
-
-    if ($_SESSION['U_Role'] == 'user'){
-        $db->redirect('./dashboard/index.php');
-    }
 
     // LOGOUT
     if(isset($_POST['btn-logout'])){
@@ -87,6 +68,7 @@ include('inc/head.php');
     <!--Content-->
     <main>
         <div class="content">
+            <?php if(empty($_SESSION['user_id'])){ ?>
             <section>
             <h1>Sign up now</h1>
                 <form id="reg-form" method="POST">
@@ -109,6 +91,7 @@ include('inc/head.php');
                     <input class="btn" type="submit" value="Submit" name="submit">
                 </form>
             </section>
+            <?php } ?>
         </div>
         <!-- <aside>
             Sidebar

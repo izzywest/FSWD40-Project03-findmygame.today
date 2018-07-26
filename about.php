@@ -1,5 +1,7 @@
 <?php $pageTitle='About'; ?>
 <?php include('inc/head.php'); ?>
+
+
    <div id="about" class="background-image"></div> 
     <!--Content-->
     <main class="top-margin">
@@ -16,7 +18,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close close_multi">×</span>
-                    <p>ONE</p>
+                    <!--Content-->
                 </div>
             </div>
 

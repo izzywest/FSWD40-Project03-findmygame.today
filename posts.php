@@ -22,6 +22,10 @@
                     ORDER BY `posts`.`PO_DateTime` DESC
                     LIMIT 10');
 		$showPosts = $db->getResultSet();
+
+        $db->query('SELECT `game`.`GA_Name` 
+                    FROM `game`' );
+        $showGames = $db->getResultSet();
 ?>
 
 
@@ -44,6 +48,11 @@
             <h1>Filter</h1>
            <div class="search"><img src="img/icons/glass.png" width="50px" height="50px" alt=""> <input class="css-input" type="text" placeholder="Search"></div>
             <strong>select by game </strong>
+                <select class="css-input filter-select">
+            <?php foreach($showGames as $game) : ?>
+                    <option value=""><?php echo $game['GA_Name']; ?></option>
+            <?php endforeach; ?>
+                </select>
         </aside> 
     </main>
 <?php include('inc/footer.php'); ?>

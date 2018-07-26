@@ -269,11 +269,13 @@ main {
 .search {
     display: flex;
     align-items: center;
+    margin-bottom: $pagePadding;
 }
 
 .small-game {
     color: $orange;
 }
+
 
 footer {
     padding: $pagePadding;

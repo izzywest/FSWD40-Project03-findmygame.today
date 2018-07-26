@@ -11,6 +11,8 @@
 
 // var_dump($show) - TO DEBUG;
 ?>
+
+<?php if($_SESSION['role']=='admin'){ ?>
 <div class="admin-content">
     <!-- Content User-->
     Display all users in Table, for edit, ban, or remove. 
@@ -99,10 +101,13 @@ $db2 = new Database;
 
 
 </div>
+<?php } ?>
 
+<?php if($_SESSION['role']=='user'){ ?>
 <div class="user-content">
     <!-- Content User-->
     Display user profile for edit. Or remove account. 
 </div>
+<?php } ?>
 
 <?php include('inc/footer.php'); ?>
