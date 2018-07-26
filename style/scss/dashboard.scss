@@ -52,7 +52,7 @@ main {
 /* Sidebar 
 ----------*/
 aside {
-    width: 250px;
+    width: 20%;
     background: $mainColor;
     border-right: 2px solid $black;
     margin-bottom: 0;
@@ -77,6 +77,7 @@ aside {
     color: $light;
     font-family: $consoleFont;
     font-weight: bold;
+    padding-left: $pagePadding;
 }
 
 .dash-nav li a:hover, .active {
