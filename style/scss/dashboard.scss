@@ -18,7 +18,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: $secColor;
+    background: $mainColor;
     color: $light;
     border-bottom: 2px solid $black;
 }
@@ -32,7 +32,7 @@ header {
 .username {
     padding: $pagePadding;
     font-family: $heading;
-    color: $mainColor;
+    color: $secColor;
 }
 
 .logout {
@@ -53,9 +53,10 @@ main {
 ----------*/
 aside {
     width: 250px;
-    background: $secColor;
+    background: $mainColor;
     border-right: 2px solid $black;
     margin-bottom: 0;
+    padding: 0;
 }
 
 /* Dash Menu */
@@ -67,11 +68,11 @@ aside {
 
 .dash-nav li a{
     border-bottom: 2px solid $black;
-    background: $secColor;
+    background: $mainColor;
     height: 40px;
     display: flex;
     align-items: center;
-    padding: 0 $pagePadding;
+    padding: $pagePadding 0; 
     text-decoration: none;
     color: $light;
     font-family: $consoleFont;
@@ -79,8 +80,13 @@ aside {
 }
 
 .dash-nav li a:hover, .active {
-    background: $mainColor;
-    color: $secColor;
+    background: $secColor;
+    color: $mainColor;
+}
+
+.create {
+    display: flex;
+    flex-direction: column;
 }
 
 .active {
@@ -94,12 +100,12 @@ aside {
 .dash-sub-nav li a {
     background: $light;
     height: 40px;
-    color: $mainColor;
+    color: $secColor;
 }
 
 a.backlink {
-    background: $mainColor !important;
-    color: $secColor !important;
+    background: $secColor !important;
+    color: $mainColor !important;
 }
 
 /* Content */
@@ -115,7 +121,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: $mainColor;
+    background: $secColor;
 }
 
 .status-bar {

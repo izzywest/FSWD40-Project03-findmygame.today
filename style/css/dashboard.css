@@ -404,7 +404,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #4a48a9;
+  background: #253444;
   color: #e4dfda;
   border-bottom: 2px solid #040403;
 }
@@ -422,7 +422,7 @@ header {
 .username {
   padding: 25px;
   font-family: "Hammersmith One", sans-serif;
-  color: #253444;
+  color: #4a48a9;
 }
 
 .logout {
@@ -445,9 +445,10 @@ main {
 ----------*/
 aside {
   width: 250px;
-  background: #4a48a9;
+  background: #253444;
   border-right: 2px solid #040403;
   margin-bottom: 0;
+  padding: 0;
 }
 
 /* Dash Menu */
@@ -459,7 +460,7 @@ aside {
 
 .dash-nav li a {
   border-bottom: 2px solid #040403;
-  background: #4a48a9;
+  background: #253444;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,7 +468,7 @@ aside {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 25px;
+  padding: 25px 0;
   text-decoration: none;
   color: #e4dfda;
   font-family: "Aldrich", sans-serif;
@@ -475,8 +476,18 @@ aside {
 }
 
 .dash-nav li a:hover, .active {
-  background: #253444;
-  color: #4a48a9;
+  background: #4a48a9;
+  color: #253444;
+}
+
+.create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .active {
@@ -490,12 +501,12 @@ aside {
 .dash-sub-nav li a {
   background: #e4dfda;
   height: 40px;
-  color: #253444;
+  color: #4a48a9;
 }
 
 a.backlink {
-  background: #253444 !important;
-  color: #4a48a9 !important;
+  background: #4a48a9 !important;
+  color: #253444 !important;
 }
 
 /* Content */
@@ -516,7 +527,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #253444;
+  background: #4a48a9;
 }
 
 .status-bar {

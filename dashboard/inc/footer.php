@@ -1,14 +1,14 @@
     </main>
     <footer>
         <ul class="status-bar">
-            <li>Logged in as: <?php echo $_SESSION['role']; ?></li>
-            <li>Rank: $rank</li>
-            <li>Posts: <a href="posts.php">$int</a></li>
-            <li>Favorite Games: $int</li>
+            <li>Logged in as: <strong><?php echo $_SESSION['role']; ?></strong></li>
+            <li>Rank: <strong> $rank</strong></li>
+            <li>Posts: <strong>$int</strong></li>
+            <li>Favorite Games: <strong>$gameList</strong></li>
         </ul>
         <div class="logout-container">
             <span class="icon-small"><?php echo file_get_contents("../img/icons/exit-door.svg"); ?></span>
-            <a class="logout" href="#logout">Logout</a>
+            <a class="logout" href="../inc/logout.php">Logout</a>
         </div>
     </footer>
 

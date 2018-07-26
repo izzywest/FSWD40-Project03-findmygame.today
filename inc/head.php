@@ -38,7 +38,7 @@
                 <li> <a href="posts.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/posts.svg"); ?> </span>Posts </a></li>
                 <li> <a href="events.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/group.svg"); ?> </span>Events </a></li>
                 <li> <a href="about.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/user.svg"); ?> </span>About </a></li>
-                <li> <a href="inc/logout.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/user.svg"); ?> </span>Logout </a></li>
+                <li> <a href="inc/logout.php"> <span class="nav-img"> <?php echo file_get_contents("img/icons/exit-door.svg"); ?> </span>Logout </a></li>
             </ul>
             <?php } ?>
         </nav>
