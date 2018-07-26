@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ----- Variables -----*/
 /*Colors*/
 /*Fonts*/
@@ -317,6 +318,12 @@ main {
 /*text*/
 a {
   text-decoration: none;
+  color: #ffa500;
+}
+
+.content a::before {
+  content: '🔗';
+  font-size: 0.8em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -701,6 +708,10 @@ main {
 }
 
 /*POSTS*/
+.event-img img {
+  margin-bottom: 25px;
+}
+
 #posts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -715,7 +726,7 @@ main {
 .post-boxes {
   width: 49%;
   position: relative;
-  padding-bottom: 70px !important;
+  padding-bottom: 92px !important;
 }
 
 .post-boxes .user {
@@ -778,6 +789,29 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.timeframe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 62px;
+  left: 0;
+  right: 0;
+  padding: 0 25px;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .small-game {
